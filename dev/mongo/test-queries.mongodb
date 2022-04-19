@@ -1,0 +1,18 @@
+// MongoDB Playground
+// To disable this template go to Settings | MongoDB | Use Default Template For Playground.
+// Make sure you are connected to enable completions and to be able to run a playground.
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+// Select the database to use.
+use('pokefight');
+
+// The drop() command destroys all data from a collection.
+// Make sure you run it against the correct database and collection.
+// db.pokemons.find({ date: { $gte: new Date('2014-04-04'), $lt: new Date('2014-04-05') } });
+// db.pokemons.find({id : 10});
+// db.users.find({});
+// db.users.find({_id: '624b6c0ac5dcd8dc4a577532'});
+
+// db-view
+db.charitems.find({name: 'CrazyMelon'}, {_id: 0, items:1, item: 1});
+
