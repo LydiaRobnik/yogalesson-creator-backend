@@ -7,8 +7,9 @@ import mongoose from 'mongoose';
 
 import { routesUser } from './routes/user';
 import { routesAsana } from './routes/asana';
+import { routesAuth } from './routes/auth';
 
-import { BadRequestError, NotFoundError } from './js/httpError';
+import { BadRequestError, HttpError, NotFoundError } from './js/httpError';
 import logRequest from './middleware/logRequest';
 
 if (process.env.NODE_ENV !== 'production') {
@@ -49,7 +50,7 @@ app.use(logRequest);
 /** Routes */
 app.use('/user', routesUser);
 app.use('/asana', routesAsana);
-// app.use('/item', routesItem);
+app.use('/auth', routesAuth);
 // app.use('/character', routesCharacter);
 
 /** images & co */
@@ -64,6 +65,9 @@ app.use((error, req, res, next) => {
     status = error.code;
     errorMsg = error.errorObj;
   } else if (error instanceof NotFoundError) {
+    status = error.code;
+    errorMsg = { error: error.message };
+  } else if (error instanceof HttpError) {
     status = error.code;
     errorMsg = { error: error.message };
   } else if (error instanceof Error) {
