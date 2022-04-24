@@ -1,6 +1,6 @@
 import express from 'express';
 import { validationResult } from 'express-validator';
-import { HttpError, NotFoundError } from './httpError';
+import { HttpError, NotFoundError } from '../js/httpError';
 import userService from '../service/user';
 import userSchema from '../model/user';
 import jwt from 'jsonwebtoken';

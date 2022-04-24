@@ -1,6 +1,6 @@
 import express from 'express';
 import { body, param } from 'express-validator';
-import validate from '../js/validate';
+import validate from '../middleware/validate';
 
 class BaseRouter {
   constructor(controller, service, schema) {

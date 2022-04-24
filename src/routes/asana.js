@@ -1,7 +1,7 @@
 import express from 'express';
 // ...rest of the initial code omitted for simplicity.
 import { body, param } from 'express-validator';
-import validate from '../js/validate';
+import validate from '../middleware/validate';
 
 import controller from '../controller/asana';
 import service from '../service/asana';
