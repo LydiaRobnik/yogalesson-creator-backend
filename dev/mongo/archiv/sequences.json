@@ -2,11 +2,10 @@
   {
     "user": "<userid>",
     "type": "sequence",
-    "title": "seq-name",
+    "name": "seq-name",
     "duration": 15,
     "audio": "mp3",
     "modifiedAt": "date",
-    "description": "text",
     "asanas": [
       {
         "asana": "embedded",
@@ -21,6 +20,5 @@
         "duration": 3
       }
     ]
-  },
-  "b"
+  }
 ]
