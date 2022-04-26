@@ -1,0 +1,48 @@
+{
+  "name": "course-name",
+  "user": "<userid>",
+  "duration": 35,
+  "audio": "mp3",
+  "modifiedAt": "date",
+  "plan": [
+    {
+      "asana": "embedded",
+      "duration": 3,
+      "audio": "mp3"
+    },
+    {
+      "type": "sequence",
+      "name": "seq-name",
+      "duration": 15,
+      "audio": "mp3",
+      "asanas": [
+        {
+          "asana": "embedded",
+          "duration": 4,
+          "audio": "mp3"
+        },
+        {
+          "asana": "embedded",
+          "duration": 5,
+          "audio": "mp3"
+        },
+        {
+          "asana": "embedded",
+          "duration": 3,
+          "audio": "mp3"
+        }
+      ]
+    },
+    {
+      "asana": "embedded",
+      "duration": 5,
+      "audio": "mp3"
+    },
+    {
+      "type": "text",
+      "duration": 5,
+      "audio": "mp3",
+      "text": "<text>"
+    }
+  ]
+}

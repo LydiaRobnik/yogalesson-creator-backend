@@ -1,0 +1,24 @@
+[
+  {
+    "user": "<userid>",
+    "type": "sequence",
+    "name": "seq-name",
+    "duration": 15,
+    "audio": "mp3",
+    "modifiedAt": "date",
+    "asanas": [
+      {
+        "asana": "embedded",
+        "duration": 4
+      },
+      {
+        "asana": "embedded",
+        "duration": 5
+      },
+      {
+        "asana": "embedded",
+        "duration": 3
+      }
+    ]
+  }
+]

@@ -2,8 +2,9 @@ import express from 'express';
 
 // ...rest of the initial code omitted for simplicity.
 import { body, param } from 'express-validator';
-import validate from '../js/validate';
+import validate from '../middleware/validate';
 import checkUserExists from '../middleware/checkUserExists';
+import verifyToken from '../middleware/verifyToken';
 
 import controller from '../controller/user';
 import service from '../service/user';
@@ -47,6 +48,7 @@ routes.get(
 
 routes.put(
   '/:id/change-password',
+  verifyToken(),
   validate([
     param('id').isString(),
     body('password').not().isEmpty().withMessage('Password is required'),
@@ -57,6 +59,7 @@ routes.put(
 
 routes.put(
   '/:id/change-username',
+  verifyToken(),
   validate([
     param('id').isString(),
     body('username').not().isEmpty().withMessage('Username is required'),
@@ -65,22 +68,9 @@ routes.put(
   controller.changeUsername
 );
 
-routes.put(
-  '/:id/friend-request/:friendId',
-  validate([param('id').isString(), param('friendId').isString()]),
-  checkUserExists,
-  controller.friendRequest
-);
-
-routes.get(
-  '/:id/friends',
-  validate([param('id').isString()]),
-  checkUserExists,
-  controller.getFriends
-);
-
 routes.get(
   '/:id',
+  verifyToken(),
   validate([param('id').isString()]),
   checkUserExists,
   controller.getUser
@@ -98,39 +88,5 @@ routes.delete(
   checkUserExists,
   controller.deleteUser
 );
-
-routes.get(
-  '/:id/character',
-  validate([param('id').isString()]),
-  controller.getUserCharacter
-);
-
-// routesUser.put(
-//   '/:id',
-//   validate([
-//     param('id').isString(),
-//     body('username').not().isEmpty().withMessage('User Name is required'),
-//     body('email').not().isEmpty().withMessage('Email is required'),
-//     body('password').not().isEmpty().withMessage('Password is required'),
-//   ]),
-//   checkUserExists,
-//   userController.editUser
-// );
-
-// routesUser.get(
-//   '/:id/orders',
-//   validate([param('id').isString()]),
-//   checkUserExists,
-//   userController.getUserOrders
-// );
-
-// routesUser.put(
-//   '/:id/check-inactive',
-//   validate([param('id').isString()]),
-//   checkUserExists,
-//   userController.checkInactive
-// );
-
-// can be reused by many routes
 
 export { routes as routesUser };

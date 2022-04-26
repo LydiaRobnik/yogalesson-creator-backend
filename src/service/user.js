@@ -16,22 +16,6 @@ class UserService extends ServiceBase {
 
     const id = await this.create(userDto, userSchema);
 
-    try {
-      const freeSkins = ['blue', 'red', 'green'];
-      // todo create standard char
-      const req = {
-        body: {
-          name: userDto.username,
-          userid: id.toString(),
-          skin: freeSkins[Math.floor(Math.random() * freeSkins.length)], // todo
-        },
-        params: {},
-      };
-      await charService.createCharacter(req);
-    } catch (error) {
-      console.log('error', error);
-    }
-
     return id;
   }
 
@@ -229,12 +213,12 @@ class UserService extends ServiceBase {
   }
 
   async checkName(name, id) {
-    const result = await userSchema.find({ username: name, _id: { $ne: id } });
-    if (result.length > 0) {
+    const docUser = await userSchema.find({ username: name, _id: { $ne: id } });
+    if (docUser.length > 0) {
       throw new BadRequestError('Username already exists');
     }
 
-    return result;
+    return docUser;
   }
 
   async checkMail(mail, id) {

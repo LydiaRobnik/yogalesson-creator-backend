@@ -1,19 +1,25 @@
-class BadRequestError extends Error {
+class HttpError extends Error {
+  constructor(
+    errorObj = 'http error',
+    code = 500,
+    name = 'InternalServerError'
+  ) {
+    super(errorObj);
+    this.name = name;
+    this.errorObj = errorObj;
+    this.code = code;
+  }
+}
+class BadRequestError extends HttpError {
   constructor(errorObj) {
-    super(errorObj);
-    this.name = 'BadRequestError';
-    this.errorObj = errorObj;
-    this.code = 400;
+    super(errorObj, 400, 'BadRequestError');
   }
 }
 
-class NotFoundError extends Error {
+class NotFoundError extends HttpError {
   constructor(errorObj = 'Not found') {
-    super(errorObj);
-    this.name = 'BadRequestError';
-    this.errorObj = errorObj;
-    this.code = 404;
+    super(errorObj, 404, 'NotFoundError');
   }
 }
 
-export { NotFoundError, BadRequestError };
+export { NotFoundError, BadRequestError, HttpError };

@@ -1,0 +1,38 @@
+[
+  {
+    "_id": "625f1d58062f9a42c8417627",
+    "img_url": "https://www.dropbox.com/s/4m64ztxkj8a4dab/boatstraightlegs.svg?raw=1",
+    "user": "<userid>/default",
+    "level": {
+      "en": "advanced beginners",
+      "de": "Fortgeschrittene Anfänger"
+    },
+    "position": {
+      "en": "sitting",
+      "de": "sitzend"
+    },
+    "training": {
+      "en": [
+        "abdominals",
+        "thigh"
+      ],
+      "de": [
+        "Bauch",
+        "Oberschenkel"
+      ]
+    },
+    "type": "Hatha",
+    "asana": {
+      "sanskrit": "Navasana",
+      "en": "Boat",
+      "de": "Boot"
+    }
+  },
+  {
+    "_id": "625f1d58062f9a42c8417627",
+    "img_url": "https://www.dropbox.com/s/4m64ztxkj8a4dab/boatstraightlegs.svg?raw=1",
+    "user": "<userid>/default",
+    "type": "text",
+    "text": "<text/html>"
+  }
+]
