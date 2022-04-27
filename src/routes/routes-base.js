@@ -1,6 +1,6 @@
-import express from 'express';
-import { body, param } from 'express-validator';
-import validate from '../middleware/validate';
+import express from "express";
+import { body, param } from "express-validator";
+import validate from "../middleware/validate";
 
 class BaseRouter {
   constructor(controller, service, schema) {
@@ -12,7 +12,7 @@ class BaseRouter {
 
   addCreateDefault(validations = () => next(), cbCheckData = () => true) {
     this.routes.post(
-      '/',
+      "/",
       validations,
       this.controller.create(this.service, this.schema, cbCheckData)
     );
@@ -20,14 +20,14 @@ class BaseRouter {
   }
 
   addGetAllDefault() {
-    this.routes.get('/', this.controller.get(this.service, this.schema));
+    this.routes.get("/", this.controller.get(this.service, this.schema));
     return this;
   }
 
   addGetByIdDefault() {
     this.routes.get(
-      '/:id',
-      validate([param('id').isString()]),
+      "/:id",
+      validate([param("id").isString()]),
       this.controller.getById(this.service, this.schema)
     );
     return this;
@@ -35,8 +35,8 @@ class BaseRouter {
 
   addEditDefault(validations = () => next(), cbCheckData = () => true) {
     this.routes.put(
-      '/:id',
-      validate([param('id').isString()]),
+      "/:id",
+      validate([param("id").isString()]),
       validations,
       this.controller.editById(this.service, this.schema, cbCheckData)
     );
@@ -45,10 +45,18 @@ class BaseRouter {
 
   addDeleteDefault() {
     this.routes.delete(
-      '/:id',
-      validate([param('id').isString()]),
+      "/:id",
+      validate([param("id").isString()]),
       // itemController.deleteItem
       this.controller.deleteById(this.service, this.schema)
+    );
+    return this;
+  }
+
+  addCustomAdminFunction(cb) {
+    this.routes.put(
+      "/",
+      this.controller.callCustomAdminFunction(this.service, this.schema, cb)
     );
     return this;
   }

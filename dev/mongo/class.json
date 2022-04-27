@@ -1,32 +1,34 @@
-{
-  "title": "class-name",
-  "user": "<userid>",
-  "duration": 35,
-  "audio": "mp3",
-  "modifiedAt": "date",
-  "plan": [
-    {
-      "user": "<userid>",
-      "type": "sequence",
-      "title": "seq-name",
-      "duration": 15,
-      "audio": "mp3",
-      "modifiedAt": "date",
-      "description": "text",
-      "asanas": [
-        {
-          "asana": "embedded",
-          "duration": 4
-        },
-        {
-          "asana": "embedded",
-          "duration": 5
-        },
-        {
-          "asana": "embedded",
-          "duration": 3
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "title": "class-name",
+    "user": "<userid>",
+    "duration": 35,
+    "audio": "mp3",
+    "modifiedAt": "date",
+    "plan": [
+      {
+        "user": "<userid>",
+        "type": "sequence",
+        "title": "seq-name",
+        "duration": 15,
+        "audio": "mp3",
+        "modifiedAt": "date",
+        "description": "text",
+        "asanas": [
+          {
+            "asana": "embedded",
+            "duration": 4
+          },
+          {
+            "asana": "embedded",
+            "duration": 5
+          },
+          {
+            "asana": "embedded",
+            "duration": 3
+          }
+        ]
+      }
+    ]
+  }
+]

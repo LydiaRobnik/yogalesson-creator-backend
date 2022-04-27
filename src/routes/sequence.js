@@ -3,16 +3,16 @@ import express from "express";
 import { body, param } from "express-validator";
 import validate from "../middleware/validate";
 
-import controller from "../controller/asana";
-import service from "../service/asana";
-import schema from "../model/asana";
+import controller from "../controller/sequence";
+import service from "../service/sequence";
+import schema from "../model/sequence";
 import BaseRouter from "./routes-base";
 
 const baseRouter = new BaseRouter(controller, service, schema);
 const routes = baseRouter.routes;
 
 const validateBody = validate([
-  body("sanskrit_name").exists().withMessage("body data invalid")
+  body("type").exists().withMessage("body data invalid")
 ]);
 // ! bind(service) to the callback-Function, otherwise big problems with the this-reference
 baseRouter
@@ -20,18 +20,17 @@ baseRouter
   .addGetAllDefault()
   .addGetByIdDefault()
   .addEditDefault(validateBody, service.checkData.bind(service))
-  .addDeleteDefault()
-  .addCustomAdminFunction(service.customAdminFunction.bind(service));
+  .addDeleteDefault();
 
-// routes.post('/', validateBody, controller.createAsana);
+// routes.post('/', validateBody, controller.createSequence);
 
-// routesAsana.put(
+// routesSequence.put(
 //   '/:id',
 //   validate([
 //     param('id').isString(),
 //     body('price').isNumeric().withMessage('Price must be a number'),
 //   ]),
-//   asanaController.editAsana
+//   sequenceController.editSequence
 // );
 
-export { routes as routesAsana };
+export { routes as routesSequence };

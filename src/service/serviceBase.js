@@ -1,5 +1,5 @@
-import mongoose from 'mongoose';
-import { BadRequestError, NotFoundError } from '../js/httpError';
+import mongoose from "mongoose";
+import { BadRequestError, NotFoundError } from "../js/httpError";
 
 export default class ServiceBase {
   async create(dto, schema) {
@@ -8,13 +8,14 @@ export default class ServiceBase {
     const doc = await schema.create(dto);
     const _id = doc._id;
 
-    console.log('mongo-id', _id);
+    console.log("mongo-id", _id);
 
     return _id;
   }
 
   async getAll(schema, req) {
-    console.log('req', req?.query);
+    console.log("req query", req?.query);
+
     const collection = await schema.find(req?.query);
     // const itemsDB = pokedex;
 
@@ -39,7 +40,7 @@ export default class ServiceBase {
     const result = await schema.deleteOne({ _id: id });
     // const itemDB = pokedex.find((item) => item.id === +id);
 
-    console.log('result', result);
+    console.log("result", result);
 
     return result;
   }
@@ -68,9 +69,14 @@ export default class ServiceBase {
     }
 
     if (!result) {
-      throw new Error('Error edit document');
+      throw new Error("Error edit document");
     }
 
+    return result;
+  }
+
+  async customAdminFunction(schema, cb) {
+    const result = await cb(schema);
     return result;
   }
 }
