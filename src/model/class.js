@@ -6,8 +6,9 @@ const Schema = mongoose.Schema;
 const classSchema = new Schema(
   {
     title: String,
-    user: mongoose.Types.ObjectId,
+    user: String,
     duration: Number,
+    favourite: Boolean,
     audio: String,
     modifiedAt: { type: Date, default: new Date() },
     plan: [sequenceSchema]

@@ -8,6 +8,7 @@ const asanaSchema = new Schema({
     sanskrit: String,
     name: String
   },
+  user: String,
   default: Boolean,
   level: String,
   tags: [String],

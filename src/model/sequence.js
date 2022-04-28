@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 
 const sequenceSchema = new Schema(
   {
-    user: mongoose.Types.ObjectId,
+    user: String,
     type: String,
     title: String,
     duration: Number,

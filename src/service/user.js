@@ -1,9 +1,9 @@
-import mongoose from 'mongoose';
-import userSchema from '../model/user';
-import { BadRequestError, NotFoundError } from '../js/httpError';
-import { comparePassword, generatePassword } from '../js/util';
-import ServiceBase from './serviceBase';
-import { userFriends } from '../model/views';
+import mongoose from "mongoose";
+import userSchema from "../model/user";
+import { BadRequestError, NotFoundError } from "../js/httpError";
+import { comparePassword, generatePassword } from "../js/util";
+import ServiceBase from "./serviceBase";
+import { userFriends } from "../model/views";
 
 class UserService extends ServiceBase {
   async createUser(userDto) {
@@ -16,7 +16,7 @@ class UserService extends ServiceBase {
 
     const id = await this.create(userDto, userSchema);
 
-    return id;
+    return await this.getUser(id);
   }
 
   async checkData(req) {
@@ -30,32 +30,32 @@ class UserService extends ServiceBase {
     const { type, password } = userDto;
 
     const whereObj =
-      type === 'username'
+      type === "username"
         ? { username: userDto.user }
         : { email: userDto.user };
 
     const doc = await this.getByCondition(whereObj, userSchema);
     const id = doc._id;
-    console.log('id', id);
+    console.log("id", id);
 
     const result = await this.editDocument(doc, userSchema, async (doc) => {
       // const [doc] = await userSchema.find(whereObj);
       // console.log('userDB', doc);
       if (
         doc &&
-        (password === '5555' ||
+        (password === "5555" ||
           (doc?.password && (await comparePassword(password, doc.password))))
       ) {
         doc.online = true;
         return true;
       } else {
-        throw new BadRequestError('Login failed');
+        throw new BadRequestError("Login failed");
       }
     });
 
     if (result) return await this.getUser(id);
 
-    throw new Error('Error Login');
+    throw new Error("Error Login");
   }
 
   async logoutUser(id) {
@@ -105,8 +105,8 @@ class UserService extends ServiceBase {
       if (!doc.friends.some((friend) => friend.userid.toString() === from)) {
         doc.friends.push({
           userid: from,
-          status: 'pending',
-          date: new Date(),
+          status: "pending",
+          date: new Date()
         });
       }
 
@@ -123,7 +123,7 @@ class UserService extends ServiceBase {
       username: p._doc.friend.username,
       email: p._doc.friend.email,
       status: p._doc.friends.status,
-      date: p._doc.friends.date,
+      date: p._doc.friends.date
     }));
     return friends;
   }
@@ -134,8 +134,8 @@ class UserService extends ServiceBase {
       const friend = doc.friends.find(
         (friend) => friend.userid.toString() === friendId
       );
-      if (friend?.status === 'pending') {
-        friend.status = 'accepted';
+      if (friend?.status === "pending") {
+        friend.status = "accepted";
         friend.date = new Date();
       }
       return doc;
@@ -151,8 +151,8 @@ class UserService extends ServiceBase {
         ) {
           doc.friends.push({
             userid: userId,
-            status: 'accepted',
-            date: new Date(),
+            status: "accepted",
+            date: new Date()
           });
         }
 
@@ -169,7 +169,7 @@ class UserService extends ServiceBase {
 
     const isPending = userDoc.friends.find(
       (friend) =>
-        friend.userid?.toString() === friendId && friend.status === 'pending'
+        friend.userid?.toString() === friendId && friend.status === "pending"
     );
 
     if (!isPending) return;
@@ -215,7 +215,7 @@ class UserService extends ServiceBase {
   async checkName(name, id) {
     const docUser = await userSchema.find({ username: name, _id: { $ne: id } });
     if (docUser.length > 0) {
-      throw new BadRequestError('Username already exists');
+      throw new BadRequestError("Username already exists");
     }
 
     return docUser;
@@ -224,7 +224,7 @@ class UserService extends ServiceBase {
   async checkMail(mail, id) {
     const result = await userSchema.find({ email: mail, _id: { $ne: id } });
     if (result.length > 0) {
-      throw new BadRequestError('Email already exists');
+      throw new BadRequestError("Email already exists");
     }
 
     return result;

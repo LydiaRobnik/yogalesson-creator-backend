@@ -13,7 +13,7 @@ const baseRouter = new BaseRouter(controller, service, schema);
 const routes = baseRouter.routes;
 
 routes.post("/login", controller.loginUser);
-// routes.post('/signup', signup); // todo
+routes.post("/signup", controller.signupUser);
 
 routes.get("/verify", verifyToken(), async (req, res) => {
   // res.json({ success: 'valid token' });
