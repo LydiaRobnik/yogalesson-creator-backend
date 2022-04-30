@@ -8,10 +8,10 @@ class BaseController {
         const checkData = await cbCheckData(req);
         if (!checkData) throw new Error("Error checkData");
 
-        const id = await service.create(req.body, schema);
-        if (!id) throw new Error("Error create");
+        const doc = await service.create(req.body, schema);
+        if (!doc) throw new Error("Error create");
 
-        return res.status(200).json({ id: id });
+        return res.status(200).json(doc);
       } catch (error) {
         next(error);
       }
@@ -64,6 +64,8 @@ class BaseController {
           req.params.id,
           schema,
           async (doc) => {
+            // todo general
+            req.body.modifiedAt = new Date();
             return req.body;
           }
         );

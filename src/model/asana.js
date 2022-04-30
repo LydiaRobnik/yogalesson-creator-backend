@@ -9,7 +9,7 @@ const asanaSchema = new Schema({
     name: String
   },
   user: String,
-  default: Boolean,
+  default: { type: Boolean, default: false },
   level: String,
   tags: [String],
   duration: Number

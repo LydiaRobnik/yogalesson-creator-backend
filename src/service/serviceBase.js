@@ -5,12 +5,15 @@ export default class ServiceBase {
   async create(dto, schema) {
     dto._id = new mongoose.Types.ObjectId();
 
+    // todo general
+    dto.modifiedAt = new Date();
+
     const doc = await schema.create(dto);
     const _id = doc._id;
 
     console.log("mongo-id", _id);
 
-    return _id;
+    return await this.getById(_id, schema);
   }
 
   async getAll(schema, req) {
@@ -72,7 +75,7 @@ export default class ServiceBase {
       throw new Error("Error edit document");
     }
 
-    return result;
+    return await this.getById(doc._id, schema);
   }
 
   async customAdminFunction(schema, cb) {

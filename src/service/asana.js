@@ -7,12 +7,12 @@ import { BadRequestError } from "../js/httpError";
 
 class AsanaService extends ServiceBase {
   async checkData(req) {
-    return await this.checkName(req.body.name, req.params.id);
+    return await this.checkName(req.body.asana.sanskrit, req.params.id);
   }
 
   async checkName(name, id) {
     const result = await asanaSchema.find({
-      sanskrit_name: name,
+      "asana.sanskrit": name,
       _id: { $ne: id }
     });
     if (result.length > 0) {

@@ -12,7 +12,7 @@ const baseRouter = new BaseRouter(controller, service, schema);
 const routes = baseRouter.routes;
 
 const validateBody = validate([
-  body("type").exists().withMessage("body data invalid")
+  body("title").exists().withMessage("body data invalid")
 ]);
 // ! bind(service) to the callback-Function, otherwise big problems with the this-reference
 baseRouter
