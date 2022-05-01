@@ -1,0 +1,911 @@
+[{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c54"
+  },
+  "img_url": "https://www.dropbox.com/s/4m64ztxkj8a4dab/boatstraightlegs.svg?raw=1",
+  "asana": {
+    "sanskrit": "Navasana",
+    "name": "Boat"
+  },
+  "level": "advanced beginners",
+  "tags": [
+    "sitting",
+    "abdominals",
+    "thigh"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c55"
+  },
+  "img_url": "https://www.dropbox.com/s/1nx0r94msxjwvyp/boatbentlegs.svg?raw=1",
+  "asana": {
+    "sanskrit": "Ardha Navasana",
+    "name": "Half Boat"
+  },
+  "level": "beginners",
+  "tags": [
+    "sitting",
+    "abdominals",
+    "thigh"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c56"
+  },
+  "img_url": "https://www.dropbox.com/s/wizj5kwxvez4c0a/bow.svg?raw=1",
+  "asana": {
+    "sanskrit": "Dhanurasana",
+    "name": "Bow"
+  },
+  "level": "advanced beginners",
+  "tags": [
+    "backbend",
+    "spine",
+    "arms",
+    "chest",
+    "glutes"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c57"
+  },
+  "img_url": "https://www.dropbox.com/s/f1w64ybg4sn8ejt/bridge.svg?raw=1",
+  "asana": {
+    "sanskrit": "Setu Bandha Sarvangasana",
+    "name": "Bridge"
+  },
+  "level": "beginners",
+  "tags": [
+    "backbend",
+    "glutes",
+    "thigh",
+    "abdominals"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c58"
+  },
+  "img_url": "https://www.dropbox.com/s/3h2pts6xbn28dh7/butterfly%3F.svg?raw=1",
+  "asana": {
+    "sanskrit": "Baddha Konasana",
+    "name": "Butterfly"
+  },
+  "level": "beginners",
+  "tags": [
+    "sitting",
+    "hip"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c59"
+  },
+  "img_url": "https://www.dropbox.com/s/o5gr4lngltsdg5r/camel.svg?raw=1",
+  "asana": {
+    "sanskrit": "Ustrasana",
+    "name": "Camel"
+  },
+  "level": "advanced beginners",
+  "tags": [
+    "backbend",
+    "hip",
+    "chest",
+    "thigh",
+    "hip",
+    "abdominals"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c5a"
+  },
+  "img_url": "https://www.dropbox.com/s/cginnz98of2jpgr/cat.svg?raw=1",
+  "asana": {
+    "sanskrit": "Marjaryasana",
+    "name": "Cat"
+  },
+  "level": "beginners",
+  "tags": [
+    "warm up and relax",
+    "spine",
+    "shoulders",
+    "chest",
+    "neck",
+    "abdominals"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c5b"
+  },
+  "img_url": "https://www.dropbox.com/s/neau4ceai1rskh6/cow.svg?raw=1",
+  "asana": {
+    "sanskrit": "Bitilasana",
+    "name": "Cow"
+  },
+  "level": "beginners",
+  "tags": [
+    "warm up and relax",
+    "spine",
+    "shoulders",
+    "chest",
+    "neck",
+    "abdominals"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c5c"
+  },
+  "img_url": "https://www.dropbox.com/s/9emlawz8vayk8bm/chair.svg?raw=1",
+  "asana": {
+    "sanskrit": "Utkatasana",
+    "name": "Chain"
+  },
+  "level": "beginners",
+  "tags": [
+    "standing",
+    "back",
+    "thigh"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c5d"
+  },
+  "img_url": "https://www.dropbox.com/s/ini3uwali0q5gxa/child.svg?raw=1",
+  "asana": {
+    "sanskrit": "Balasana",
+    "name": "Child's Pose"
+  },
+  "level": "beginners",
+  "tags": [
+    "warm up and relax",
+    "spine",
+    "shoulders"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c5e"
+  },
+  "img_url": "https://www.dropbox.com/s/eohyx2crvtjvaxb/sivasana.svg?raw=1",
+  "asana": {
+    "sanskrit": "Savasana",
+    "name": "Corpse"
+  },
+  "level": "beginners",
+  "tags": [
+    "warm up and relax"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c5f"
+  },
+  "img_url": "https://www.dropbox.com/s/1oc1dqv8mfwo8uj/highlunge.svg?raw=1",
+  "asana": {
+    "sanskrit": "Alanasana",
+    "name": "Crescent Lunge"
+  },
+  "level": "advanced beginners",
+  "tags": [
+    "standing",
+    "thigh",
+    "glutes",
+    "legs",
+    "hip"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c60"
+  },
+  "img_url": "https://www.dropbox.com/s/ukaxoioh0uooswj/crow.svg?raw=1",
+  "asana": {
+    "sanskrit": "Bakasana",
+    "name": "Crow"
+  },
+  "level": "advanced",
+  "tags": [
+    "arm balances",
+    "arms",
+    "abdominals",
+    "balance",
+    "wrist"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c61"
+  },
+  "img_url": "https://www.dropbox.com/s/px1foombb3v24se/dolphin.svg?raw=1",
+  "asana": {
+    "sanskrit": "Ardha Pincha Mayurasana",
+    "name": "Dolphin"
+  },
+  "level": "advanced beginners",
+  "tags": [
+    "arm balances",
+    "arms",
+    "abdominals",
+    "balance",
+    "back",
+    "inversion"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c62"
+  },
+  "img_url": "https://www.dropbox.com/s/75xa1bduu2u5y7d/downdog.svg?raw=1",
+  "asana": {
+    "sanskrit": "Adho Mukha Svanasana",
+    "name": "Downward-Facing Dog"
+  },
+  "level": "beginners",
+  "tags": [
+    "warm up and relax",
+    "standing",
+    "shoulders",
+    "arms",
+    "back",
+    "calves",
+    "thigh",
+    "inversion"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c63"
+  },
+  "img_url": "https://www.dropbox.com/s/w05qgx7wyxva1y3/eagle.svg?raw=1",
+  "asana": {
+    "sanskrit": "Garudasana",
+    "name": "Eagle"
+  },
+  "level": "beginners",
+  "tags": [
+    "standing",
+    "balance",
+    "legs",
+    "thigh",
+    "back",
+    "calves"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c64"
+  },
+  "img_url": "https://www.dropbox.com/s/0yk0z7f0a4ni37l/extendedhandtotoe.svg?raw=1",
+  "asana": {
+    "sanskrit": "Utthita Hasta Padangusthasana",
+    "name": "Extended Hand to Toe"
+  },
+  "level": "advanced beginners",
+  "tags": [
+    "standing",
+    "balance",
+    "back",
+    "thigh",
+    "legs"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c65"
+  },
+  "img_url": "https://www.dropbox.com/s/yzynxmyb9o7eras/extendedsideangle.svg?raw=1",
+  "asana": {
+    "sanskrit": "Utthita Parsvakonasana",
+    "name": "Extended Side Angle"
+  },
+  "level": "beginners",
+  "tags": [
+    "standing",
+    "thigh",
+    "legs",
+    "chest"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c66"
+  },
+  "img_url": "https://www.dropbox.com/s/kjlyju4m91qgoi6/forearmstand.svg?raw=1",
+  "asana": {
+    "sanskrit": "Pincha Mayurasana",
+    "name": "Forearm Stand"
+  },
+  "level": "advanced",
+  "tags": [
+    "arm balances",
+    "arms",
+    "abdominals",
+    "balance",
+    "back",
+    "inversion"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c67"
+  },
+  "img_url": "https://www.dropbox.com/s/sjqfq99pqpelv4v/forwardfoldshoulderstretch.svg?raw=1",
+  "asana": {
+    "sanskrit": "Uttanasana",
+    "name": "Forward Bend with Shoulder Opener"
+  },
+  "level": "beginners",
+  "tags": [
+    "standing",
+    "back",
+    "shoulders",
+    "legs"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c68"
+  },
+  "img_url": "https://www.dropbox.com/s/gpumf9eehr8wo9g/halfmoon.svg?raw=1",
+  "asana": {
+    "sanskrit": "Ardha Chandrasana",
+    "name": "Half-Moon"
+  },
+  "level": "advanced beginners",
+  "tags": [
+    "standing",
+    "balance",
+    "abdominals",
+    "thigh",
+    "legs"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c69"
+  },
+  "img_url": "https://www.dropbox.com/s/p7pf5j0untktn9c/handstand.svg?raw=1",
+  "asana": {
+    "sanskrit": "Adho Mukha Vrksasana",
+    "name": "Handstand"
+  },
+  "tags": [
+    "arm balances",
+    "balance",
+    "arms",
+    "abdominals"
+  ],
+  "level": "advanced",
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c6a"
+  },
+  "img_url": "https://www.dropbox.com/s/h0ehjaz1wa9xfu1/lowlunge.svg?raw=1",
+  "asana": {
+    "sanskrit": "Anjaneyasana",
+    "name": "Low Lunge"
+  },
+  "level": "beginners",
+  "tags": [
+    "standing",
+    "hip",
+    "legs",
+    "legs",
+    "arms"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c6b"
+  },
+  "img_url": "https://www.dropbox.com/s/77peru289zm446u/pigeon.svg?raw=1",
+  "asana": {
+    "sanskrit": "Supta Kapotasana",
+    "name": "Pigeon"
+  },
+  "level": "advanced beginners",
+  "tags": [
+    "sitting",
+    "hip",
+    "spine",
+    "thigh",
+    "legs"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c6c"
+  },
+  "img_url": "https://www.dropbox.com/s/10usd0gcqgy6o53/kingpigeon.svg?raw=1",
+  "asana": {
+    "sanskrit": "Eka Pada Rajakapotasana",
+    "name": "King Pigeon"
+  },
+  "level": "beginners",
+  "tags": [
+    "sitting",
+    "hip",
+    "spine",
+    "thigh",
+    "legs"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c6d"
+  },
+  "img_url": "https://www.dropbox.com/s/jg6ge8zpaltx10f/plank.svg?raw=1",
+  "asana": {
+    "sanskrit": "Phalakasana",
+    "name": "Plank"
+  },
+  "level": "advanced beginners",
+  "tags": [
+    "arm balances",
+    "arms",
+    "abdominals",
+    "glutes"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c6e"
+  },
+  "img_url": "https://www.dropbox.com/s/zi9231wbajm6d2m/plow.svg?raw=1",
+  "asana": {
+    "sanskrit": "Halasana",
+    "name": "Plow"
+  },
+  "level": "advanced beginners",
+  "tags": [
+    "forword bend",
+    "arms",
+    "back",
+    "abdominals",
+    "spine",
+    "inversion"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c6f"
+  },
+  "img_url": "https://www.dropbox.com/s/j7p2600bmf840e0/pyramid.svg?raw=1",
+  "asana": {
+    "sanskrit": "Parsvottanasana",
+    "name": "Pyramid"
+  },
+  "level": "advanced beginners",
+  "tags": [
+    "standing",
+    "legs",
+    "spine",
+    "shoulders"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c70"
+  },
+  "img_url": "https://www.dropbox.com/s/q6yn6cb9fglo0wp/reverswarrior.svg?raw=1",
+  "asana": {
+    "sanskrit": "Parsva Virabhadrasana",
+    "name": "Reverse Warrior"
+  },
+  "level": "beginners",
+  "tags": [
+    "standing",
+    "legs",
+    "hip",
+    "arms",
+    "shoulders"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c71"
+  },
+  "img_url": "https://www.dropbox.com/s/ji0otecqx42by00/seatedforwardfold.svg?raw=1",
+  "asana": {
+    "sanskrit": "Paschimottanasana",
+    "name": "Seated Forward Bend"
+  },
+  "level": "beginners",
+  "tags": [
+    "sitting",
+    "legs",
+    "back",
+    "glutes"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c72"
+  },
+  "sanskrit_name": "Padmasana",
+  "english_name": "Lotus",
+  "img_url": "https://www.dropbox.com/s/0oylivjwzuj5fnp/seatedORlotus.svg?raw=1",
+  "asana": {
+    "sanskrit": "Padmasana",
+    "name": "Lotus"
+  },
+  "level": "advanced",
+  "tags": [
+    "sitting",
+    "legs",
+    "hip"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c73"
+  },
+  "img_url": "https://www.dropbox.com/s/u9joi8lbntxumyh/seatedspinaltwist.svg?raw=1",
+  "asana": {
+    "sanskrit": "Ardha Matsyendrasana",
+    "name": "Half Lord of the Fishes"
+  },
+  "level": "advanced beginners",
+  "tags": [
+    "sitting",
+    "legs",
+    "hip",
+    "shoulders",
+    "spine"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c74"
+  },
+  "img_url": "https://www.dropbox.com/s/tqj48exec3zub2u/shoulderstand.svg?raw=1",
+  "asana": {
+    "sanskrit": "Salamba Sarvangasana",
+    "name": "Shoulder Stand"
+  },
+  "level": "advanced beginners",
+  "tags": [
+    "inversion",
+    "shoulders",
+    "neck",
+    "abdominals",
+    "back"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c75"
+  },
+  "img_url": "https://www.dropbox.com/s/w35ciia4u570xj8/sideplank.svg?raw=1",
+  "asana": {
+    "sanskrit": "Vasisthasana",
+    "name": "Side Plank"
+  },
+  "level": "beginners",
+  "tags": [
+    "arm balance",
+    "arms",
+    "abdominals",
+    "shoulders",
+    "wrist",
+    "legs",
+    "balance"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c76"
+  },
+  "img_url": "https://www.dropbox.com/s/cl8teqpf9yingwm/sphinx.svg?raw=1",
+  "asana": {
+    "sanskrit": "Salamba Bhujangasana",
+    "name": "Sphinx"
+  },
+  "level": "beginners",
+  "tags": [
+    "back bend",
+    "spine",
+    "chest",
+    "shoulders",
+    "abdominals"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c77"
+  },
+  "img_url": "https://www.dropbox.com/s/u8dxhc41hjfcxj6/splits.svg?raw=1",
+  "asana": {
+    "sanskrit": "Hanumanasana",
+    "name": "Splits"
+  },
+  "level": "advanced",
+  "tags": [
+    "sitting",
+    "legs",
+    "thigh",
+    "glutes",
+    "abdominals"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c78"
+  },
+  "img_url": "https://www.dropbox.com/s/ntrwtdlr6tdkdxz/squat.svg?raw=1",
+  "asana": {
+    "sanskrit": "Malasana",
+    "name": "Squat"
+  },
+  "level": "beginners",
+  "tags": [
+    "standing",
+    "hip",
+    "abdominals",
+    "ankle"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c79"
+  },
+  "img_url": "https://www.dropbox.com/s/u09snmhtposvaq0/standingforwardfold.svg?raw=1",
+  "asana": {
+    "sanskrit": "Uttanasana",
+    "name": "Standing Forward Bend"
+  },
+  "level": "beginners",
+  "tags": [
+    "standing",
+    "spine",
+    "legs",
+    "thigh"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c7a"
+  },
+  "img_url": "https://www.dropbox.com/s/9tv6z3qdcw2vg3a/standingstretch.svg?raw=1",
+  "asana": {
+    "sanskrit": "Ashta Chandrasana",
+    "name": "Crescent Moon"
+  },
+  "level": "advanced beginners",
+  "tags": [
+    "standing",
+    "balance",
+    "legs",
+    "hip",
+    "glutes"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c7b"
+  },
+  "img_url": "https://www.dropbox.com/s/6z51vzosovhx5w7/straddlesplit.svg?raw=1",
+  "asana": {
+    "sanskrit": "Upavistha Konasana",
+    "name": "Side Splits"
+  },
+  "level": "advanced beginners",
+  "tags": [
+    "sitting",
+    "legs",
+    "hip",
+    "glutes",
+    "spine"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c7c"
+  },
+  "img_url": "https://www.dropbox.com/s/mn2ktlihp12mtfa/tree.svg?raw=1",
+  "asana": {
+    "sanskrit": "Vrksasana",
+    "name": "Tree"
+  },
+  "level": "beginners",
+  "tags": [
+    "standing",
+    "legs",
+    "glutes",
+    "abdominals"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c7d"
+  },
+  "img_url": "https://www.dropbox.com/s/l41pfqjwmjoy5os/triangle.svg?raw=1",
+  "asana": {
+    "sanskrit": "Trikonasana",
+    "name": "Triangle"
+  },
+  "level": "beginners",
+  "tags": [
+    "standing",
+    "thigh",
+    "glutes",
+    "abdominals",
+    "balance"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c7e"
+  },
+  "img_url": "https://www.dropbox.com/s/vnfx1srlwt1583t/updog.svg?raw=1",
+  "asana": {
+    "sanskrit": "Urdhva Mukha Svsnssana",
+    "name": "Upward-Facing Dog"
+  },
+  "level": "beginners",
+  "tags": [
+    "back bend",
+    "chest",
+    "glutes",
+    "abdominals",
+    "back",
+    "spine"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c7f"
+  },
+  "img_url": "https://www.dropbox.com/s/j9fip5gm1o1l3fx/warrior1.svg?raw=1",
+  "asana": {
+    "sanskrit": "Virabhadrasana One",
+    "name": "Warrior One"
+  },
+  "level": "beginners",
+  "tags": [
+    "standing",
+    "legs",
+    "arms",
+    "hip",
+    "shoulders"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c80"
+  },
+  "img_url": "https://www.dropbox.com/s/rsb3mx41dfq4otl/warrior2.svg?raw=1",
+  "asana": {
+    "sanskrit": "Virabhadrasana Two",
+    "name": "Warrior Two"
+  },
+  "level": "beginners",
+  "tags": [
+    "standing",
+    "legs",
+    "arms",
+    "hip",
+    "shoulders"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c81"
+  },
+  "img_url": "https://www.dropbox.com/s/lwgoky3z37ameif/warrior3.svg?raw=1",
+  "asana": {
+    "sanskrit": "Virabhadrasana Three",
+    "name": "Warrior Three"
+  },
+  "level": "advanced beginners",
+  "tags": [
+    "standing",
+    "legs",
+    "arms",
+    "balance",
+    "shoulders",
+    "ankle"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c82"
+  },
+  "img_url": "https://www.dropbox.com/s/kpa1bewuut3lm5q/wheel.svg?raw=1",
+  "asana": {
+    "sanskrit": "Urdhva Dhanurasana",
+    "name": "Wheel"
+  },
+  "level": "advanced",
+  "tags": [
+    "back bend",
+    "abdominals",
+    "glutes",
+    "thigh",
+    "shoulders"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c83"
+  },
+  "img_url": "https://www.dropbox.com/s/d1dbdvo4l7xry4w/downdogflip.svg?raw=1",
+  "asana": {
+    "sanskrit": "Camatkarasana",
+    "name": "Wild Thing"
+  },
+  "level": "advanced",
+  "tags": [
+    "back bend",
+    "abdominals",
+    "glutes",
+    "thigh",
+    "shoulders"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "626bf3b57ede1204a04cab4a"
+  },
+  "img_url": "https://www.dropbox.com/s/px1foombb3v24se/dolphin.svg?raw=1",
+  "asana": {
+    "sanskrit": "Blubbasana",
+    "name": "The Blubb"
+  },
+  "user": "6260146101b2260d9fa2b964",
+  "default": false,
+  "level": "advanced beginners",
+  "tags": [
+    "arm balances",
+    "abdominals",
+    "back",
+    "inversion"
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "626bf3eb7ede1204a04cab51"
+  },
+  "img_url": "https://www.dropbox.com/s/px1foombb3v24se/dolphin.svg?raw=1",
+  "asana": {
+    "sanskrit": "My own Asana",
+    "name": "Custom Asana"
+  },
+  "user": "6260146101b2260d9fa2b964",
+  "default": false,
+  "level": "advanced beginners",
+  "tags": [
+    "arm balances",
+    "abdominals",
+    "back",
+    "inversion"
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "626bf4a8ed4cf0ae52daf7bd"
+  },
+  "img_url": "https://www.dropbox.com/s/px1foombb3v24se/dolphin.svg?raw=1",
+  "asana": {
+    "sanskrit": "Haukasana",
+    "name": "The Haukman"
+  },
+  "user": "6260146101b2260d9fa2b964",
+  "default": false,
+  "level": "advanced beginners",
+  "tags": [
+    "arm balances",
+    "abdominals",
+    "back",
+    "inversion"
+  ],
+  "__v": 0
+}]
