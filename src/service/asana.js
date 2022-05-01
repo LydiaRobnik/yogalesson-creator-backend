@@ -27,7 +27,7 @@ class AsanaService extends ServiceBase {
   async customAdminFunction() {
     console.log("customAdminFunction");
 
-    this.testSetNewAsanaUrl();
+    // this.testSetNewAsanaUrl();
 
     // const res = await asanaSchema.updateMany({}, { $unset: { id: 1 } });
     // console.log("res", res);
@@ -49,11 +49,11 @@ class AsanaService extends ServiceBase {
   async testSetNewAsanaUrl() {
     const all = await this.getAll(asanaSchema);
 
+    // all.length = 1;
+
     for (let asana of all) {
       await this.editDocumentById(asana._id, asanaSchema, (doc) => {
-        doc.img_url = doc.img_url
-          .replaceAll("?raw=1", "")
-          .replaceAll("com/s/", "com/s/raw/");
+        doc.img_url = `https://yogalesson-createor-backend.herokuapp.com/images/asana/${asana._id}.svg`;
         return doc;
       });
     }
