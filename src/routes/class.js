@@ -7,6 +7,11 @@ import controller from "../controller/class";
 import service from "../service/class";
 import schema from "../model/class";
 import BaseRouter from "./routes-base";
+import path from "path";
+import multer from "multer";
+
+// multer config
+const upload = multer({ dest: path.resolve("public/uploads/") });
 
 const baseRouter = new BaseRouter(controller, service, schema);
 const routes = baseRouter.routes;
@@ -21,6 +26,14 @@ baseRouter
   .addGetByIdDefault()
   .addEditDefault(validateBody, service.checkData.bind(service))
   .addDeleteDefault();
+
+routes.post(
+  "/:id/upload-preview",
+  express.raw({ type: "image/*" }),
+  upload.single("preview_pic"),
+  // checkImage,
+  controller.uploadPreview
+);
 
 // routes.post('/', validateBody, controller.createClass);
 
