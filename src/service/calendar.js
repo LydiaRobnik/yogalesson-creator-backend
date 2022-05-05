@@ -18,6 +18,11 @@ class CalendarService extends ServiceBase {
     if (calendarDto.event?.regular && calendarDto.event?.regular !== "once") {
       console.log("createCalendar: regular", calendarDto.event?.regular);
 
+      this.editDocumentById(id._id, calendarSchema, async (doc) => {
+        doc.event.regularLink = id._id;
+        return doc;
+      });
+
       const createRegulars = async (cb) =>
         await Promise.all(
           range({ from: 1, to: +calendarDto.event.regularCount }).map(
@@ -28,9 +33,7 @@ class CalendarService extends ServiceBase {
 
               calendarDto.event.date = cb(
                 DateTime.fromISO(calendarDto.event.date)
-              )
-                // .plus({ "days": 1 })
-                .toISODate();
+              ).toISODate();
               await this.create(calendarDto, calendarSchema);
             }
           )
