@@ -16,12 +16,14 @@ const validateBody = validate([
 ]);
 // ! bind(service) to the callback-Function, otherwise big problems with the this-reference
 baseRouter
-  .addCreateDefault(validateBody, service.checkData.bind(service))
+  // .addCreateDefault(validateBody, service.checkData.bind(service))
   .addGetAllDefault()
   .addGetByIdDefault()
   .addEditDefault(validateBody, service.checkData.bind(service))
   .addDeleteDefault()
   .addCustomAdminFunction(service.customAdminFunction.bind(service));
+
+routes.post("/", validateBody, controller.createAsana);
 
 // routes.post('/', validateBody, controller.createAsana);
 

@@ -42,7 +42,11 @@ db.on("error", console.error.bind(console, "MongoDB connection error:"));
 /** Parse the request */
 app.use(express.urlencoded({ extended: false }));
 /** Takes care of JSON data */
-app.use(express.json());
+app.use(
+  express.json({
+    limit: "50mb"
+  })
+);
 
 /** middlewares */
 app.use(cors());

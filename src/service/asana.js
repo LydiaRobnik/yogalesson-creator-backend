@@ -2,14 +2,33 @@ import mongoose from "mongoose";
 import ServiceBase from "./serviceBase";
 import asanaSchema from "../model/asana";
 import { BadRequestError } from "../js/httpError";
+import fetch from "node-fetch";
 
 import fs from "fs";
+import path from "path";
 import https from "https";
 // import pokedex from '../model/pokedex.json';
 
 class AsanaService extends ServiceBase {
+  async createAsana(asanaDto) {
+    await this.checkName(asanaDto.asana.sanskrit);
+
+    const id = await this.create(asanaDto, asanaSchema);
+    const [isUpload, fileName] = await this.checkUrl(asanaDto.img_url, id._id);
+
+    if (isUpload) {
+      await this.editDocumentById(id._id, asanaSchema, (doc) => {
+        doc.img_url = `https://yogalesson-createor-backend.herokuapp.com/images/asana/${fileName}`;
+        return doc;
+      });
+    }
+
+    return id;
+  }
+
   async checkData(req) {
     return await this.checkName(req.body.asana.sanskrit, req.params.id);
+    // return await this.checkUrl(req.body.img_url);
   }
 
   async checkName(name, id) {
@@ -22,6 +41,32 @@ class AsanaService extends ServiceBase {
     }
 
     return result;
+  }
+
+  async checkUrl(url, id) {
+    // console.log("checkUrl", url);
+
+    if (url.startsWith("data:image")) {
+      // Remove header
+      let [imageType, base64Image] = url.split(";base64,");
+
+      const fileName = `${id}.${imageType.split("/")[1]}`;
+
+      fs.writeFile(
+        path.resolve(`public/images/asana/${fileName}`),
+        base64Image,
+        "base64",
+        function (err) {
+          console.log(err);
+        }
+      );
+
+      // uploaded image -> set url in DB
+      return [true, fileName];
+
+      // fs.createWriteStream(path.resolve(`public/uploads/test.png`)).write(blob);
+    }
+    return [false, ""];
   }
 
   async customAdminFunction() {
