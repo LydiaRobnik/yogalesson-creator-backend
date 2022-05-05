@@ -1,19 +1,28 @@
-import bcrypt from 'bcrypt';
+import bcrypt from "bcrypt";
 
 // Hash Password
 const generatePassword = async (password) => {
   const hash = await bcrypt.hash(password, 10);
 
-  console.log('hash', hash);
+  console.log("hash", hash);
 
   return hash;
 };
 
 //compare password
 const comparePassword = async (inputPw, hashedPw) => {
-  console.log('inputPw', inputPw);
+  console.log("inputPw", inputPw);
   console.log(hashedPw);
   return await bcrypt.compare(inputPw, hashedPw);
 };
 
-export { generatePassword, comparePassword };
+const range = ({
+  from = 0,
+  to,
+  step = 1,
+  length = Math.ceil((to - from) / step)
+}) => {
+  return Array.from({ length }, (_, i) => from + i * step);
+};
+
+export { generatePassword, comparePassword, range };
