@@ -12,6 +12,7 @@ const asanaSchema = new Schema({
   default: { type: Boolean, default: false },
   level: String,
   tags: [String],
+  modifiedAt: { type: Date, default: new Date() },
   duration: Number
 });
 

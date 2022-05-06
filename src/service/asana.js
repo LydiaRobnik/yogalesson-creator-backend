@@ -26,6 +26,37 @@ class AsanaService extends ServiceBase {
     return id;
   }
 
+  async updateAsana(asanaDto) {
+    await this.checkName(asanaDto.asana.sanskrit, asanaDto._id);
+    const [isUpload, fileName] = await this.checkUrl(
+      asanaDto.img_url,
+      asanaDto._id
+    );
+
+    const id = await this.editDocumentById(
+      asanaDto._id,
+      asanaSchema,
+      async (doc) => {
+        // todo general
+        asanaDto.modifiedAt = new Date();
+
+        if (isUpload) {
+          asanaDto.img_url = `https://yogalesson-createor-backend.herokuapp.com/images/asana/${fileName}`;
+        }
+        return asanaDto;
+      }
+    );
+
+    // if (isUpload) {
+    //   await this.editDocumentById(id._id, asanaSchema, (doc) => {
+    //     doc.img_url = `https://yogalesson-createor-backend.herokuapp.com/images/asana/${fileName}`;
+    //     return doc;
+    //   });
+    // }
+
+    return id;
+  }
+
   async checkData(req) {
     return await this.checkName(req.body.asana.sanskrit, req.params.id);
     // return await this.checkUrl(req.body.img_url);

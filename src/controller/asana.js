@@ -13,6 +13,21 @@ class AsanaController extends BaseController {
       next(error);
     }
   }
+
+  async updateAsana(req, res, next) {
+    try {
+      if (req.body._id && req.params.id !== req.body._id) {
+        throw new BadRequestError("Ids do not match");
+      }
+
+      const id = await service.updateAsana(req.body);
+      if (!id) throw new Error("Error updateAsana");
+
+      return res.status(200).json(id);
+    } catch (error) {
+      next(error);
+    }
+  }
 }
 
 export default new AsanaController();

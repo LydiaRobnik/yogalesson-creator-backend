@@ -19,11 +19,12 @@ baseRouter
   // .addCreateDefault(validateBody, service.checkData.bind(service))
   .addGetAllDefault()
   .addGetByIdDefault()
-  .addEditDefault(validateBody, service.checkData.bind(service))
+  // .addEditDefault(validateBody, service.checkData.bind(service))
   .addDeleteDefault()
   .addCustomAdminFunction(service.customAdminFunction.bind(service));
 
 routes.post("/", validateBody, controller.createAsana);
+routes.put("/:id", validateBody, controller.updateAsana);
 
 // routes.post('/', validateBody, controller.createAsana);
 
