@@ -16,7 +16,7 @@ class SequenceService extends ServiceBase {
       _id: { $ne: id }
     });
     if (result.length > 0) {
-      throw new BadRequestError("Sequencename already exists");
+      // throw new BadRequestError("Sequencename already exists");
     }
 
     return result;

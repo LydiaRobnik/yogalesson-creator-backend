@@ -16,7 +16,7 @@ class ClassService extends ServiceBase {
       _id: { $ne: id }
     });
     if (result.length > 0) {
-      throw new BadRequestError("Classname already exists");
+      // throw new BadRequestError("Classname already exists");
     }
 
     return result;

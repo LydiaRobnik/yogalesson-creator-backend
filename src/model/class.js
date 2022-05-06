@@ -9,6 +9,7 @@ const classSchema = new Schema(
     user: String,
     duration: Number,
     favourite: Boolean,
+    preview: String,
     audio: String,
     modifiedAt: { type: Date, default: new Date() },
     plan: [sequenceSchema]

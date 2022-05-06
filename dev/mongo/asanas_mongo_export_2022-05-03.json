@@ -1,0 +1,926 @@
+[{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c54"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c54.svg",
+  "asana": {
+    "sanskrit": "Navasana",
+    "name": "Boat"
+  },
+  "level": "advanced beginners",
+  "tags": [
+    "sitting",
+    "abdominals",
+    "thigh"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c55"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c55.svg",
+  "asana": {
+    "sanskrit": "Ardha Navasana",
+    "name": "Half Boat"
+  },
+  "level": "beginners",
+  "tags": [
+    "sitting",
+    "abdominals",
+    "thigh"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c56"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c56.svg",
+  "asana": {
+    "sanskrit": "Dhanurasana",
+    "name": "Bow"
+  },
+  "level": "advanced beginners",
+  "tags": [
+    "backbend",
+    "spine",
+    "arms",
+    "chest",
+    "glutes"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c57"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c57.svg",
+  "asana": {
+    "sanskrit": "Setu Bandha Sarvangasana",
+    "name": "Bridge"
+  },
+  "level": "beginners",
+  "tags": [
+    "backbend",
+    "glutes",
+    "thigh",
+    "abdominals"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c58"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c58.svg",
+  "asana": {
+    "sanskrit": "Baddha Konasana",
+    "name": "Butterfly"
+  },
+  "level": "beginners",
+  "tags": [
+    "sitting",
+    "hip"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c59"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c59.svg",
+  "asana": {
+    "sanskrit": "Ustrasana",
+    "name": "Camel"
+  },
+  "level": "advanced beginners",
+  "tags": [
+    "backbend",
+    "hip",
+    "chest",
+    "thigh",
+    "hip",
+    "abdominals"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c5a"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c5a.svg",
+  "asana": {
+    "sanskrit": "Marjaryasana",
+    "name": "Cat"
+  },
+  "level": "beginners",
+  "tags": [
+    "warm up and relax",
+    "spine",
+    "shoulders",
+    "chest",
+    "neck",
+    "abdominals"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c5b"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c5b.svg",
+  "asana": {
+    "sanskrit": "Bitilasana",
+    "name": "Cow"
+  },
+  "level": "beginners",
+  "tags": [
+    "warm up and relax",
+    "spine",
+    "shoulders",
+    "chest",
+    "neck",
+    "abdominals"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c5c"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c5c.svg",
+  "asana": {
+    "sanskrit": "Utkatasana",
+    "name": "Chain"
+  },
+  "level": "beginners",
+  "tags": [
+    "standing",
+    "back",
+    "thigh"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c5d"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c5d.svg",
+  "asana": {
+    "sanskrit": "Balasana",
+    "name": "Child's Pose"
+  },
+  "level": "beginners",
+  "tags": [
+    "warm up and relax",
+    "spine",
+    "shoulders"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c5e"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c5e.svg",
+  "asana": {
+    "sanskrit": "Savasana",
+    "name": "Corpse"
+  },
+  "level": "beginners",
+  "tags": [
+    "warm up and relax"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c5f"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c5f.svg",
+  "asana": {
+    "sanskrit": "Alanasana",
+    "name": "Crescent Lunge"
+  },
+  "level": "advanced beginners",
+  "tags": [
+    "standing",
+    "thigh",
+    "glutes",
+    "legs",
+    "hip"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c60"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c60.svg",
+  "asana": {
+    "sanskrit": "Bakasana",
+    "name": "Crow"
+  },
+  "level": "advanced",
+  "tags": [
+    "arm balances",
+    "arms",
+    "abdominals",
+    "balance",
+    "wrist"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c61"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c61.svg",
+  "asana": {
+    "sanskrit": "Ardha Pincha Mayurasana",
+    "name": "Dolphin"
+  },
+  "level": "advanced beginners",
+  "tags": [
+    "arm balances",
+    "arms",
+    "abdominals",
+    "balance",
+    "back",
+    "inversion"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c62"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c62.svg",
+  "asana": {
+    "sanskrit": "Adho Mukha Svanasana",
+    "name": "Downward-Facing Dog"
+  },
+  "level": "beginners",
+  "tags": [
+    "warm up and relax",
+    "standing",
+    "shoulders",
+    "arms",
+    "back",
+    "calves",
+    "thigh",
+    "inversion"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c63"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c63.svg",
+  "asana": {
+    "sanskrit": "Garudasana",
+    "name": "Eagle"
+  },
+  "level": "beginners",
+  "tags": [
+    "standing",
+    "balance",
+    "legs",
+    "thigh",
+    "back",
+    "calves"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c64"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c64.svg",
+  "asana": {
+    "sanskrit": "Utthita Hasta Padangusthasana",
+    "name": "Extended Hand to Toe"
+  },
+  "level": "advanced beginners",
+  "tags": [
+    "standing",
+    "balance",
+    "back",
+    "thigh",
+    "legs"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c65"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c65.svg",
+  "asana": {
+    "sanskrit": "Utthita Parsvakonasana",
+    "name": "Extended Side Angle"
+  },
+  "level": "beginners",
+  "tags": [
+    "standing",
+    "thigh",
+    "legs",
+    "chest"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c66"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c66.svg",
+  "asana": {
+    "sanskrit": "Pincha Mayurasana",
+    "name": "Forearm Stand"
+  },
+  "level": "advanced",
+  "tags": [
+    "arm balances",
+    "arms",
+    "abdominals",
+    "balance",
+    "back",
+    "inversion"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c67"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c67.svg",
+  "asana": {
+    "sanskrit": "Uttanasana",
+    "name": "Forward Bend with Shoulder Opener"
+  },
+  "level": "beginners",
+  "tags": [
+    "standing",
+    "back",
+    "shoulders",
+    "legs"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c68"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c68.svg",
+  "asana": {
+    "sanskrit": "Ardha Chandrasana",
+    "name": "Half-Moon"
+  },
+  "level": "advanced beginners",
+  "tags": [
+    "standing",
+    "balance",
+    "abdominals",
+    "thigh",
+    "legs"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c69"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c69.svg",
+  "asana": {
+    "sanskrit": "Adho Mukha Vrksasana",
+    "name": "Handstand"
+  },
+  "tags": [
+    "arm balances",
+    "balance",
+    "arms",
+    "abdominals"
+  ],
+  "level": "advanced",
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c6a"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c6a.svg",
+  "asana": {
+    "sanskrit": "Anjaneyasana",
+    "name": "Low Lunge"
+  },
+  "level": "beginners",
+  "tags": [
+    "standing",
+    "hip",
+    "legs",
+    "legs",
+    "arms"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c6b"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c6b.svg",
+  "asana": {
+    "sanskrit": "Supta Kapotasana",
+    "name": "Pigeon"
+  },
+  "level": "advanced beginners",
+  "tags": [
+    "sitting",
+    "hip",
+    "spine",
+    "thigh",
+    "legs"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c6c"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c6c.svg",
+  "asana": {
+    "sanskrit": "Eka Pada Rajakapotasana",
+    "name": "King Pigeon"
+  },
+  "level": "beginners",
+  "tags": [
+    "sitting",
+    "hip",
+    "spine",
+    "thigh",
+    "legs"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c6d"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c6d.svg",
+  "asana": {
+    "sanskrit": "Phalakasana",
+    "name": "Plank"
+  },
+  "level": "advanced beginners",
+  "tags": [
+    "arm balances",
+    "arms",
+    "abdominals",
+    "glutes"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c6e"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c6e.svg",
+  "asana": {
+    "sanskrit": "Halasana",
+    "name": "Plow"
+  },
+  "level": "advanced beginners",
+  "tags": [
+    "forword bend",
+    "arms",
+    "back",
+    "abdominals",
+    "spine",
+    "inversion"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c6f"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c6f.svg",
+  "asana": {
+    "sanskrit": "Parsvottanasana",
+    "name": "Pyramid"
+  },
+  "level": "advanced beginners",
+  "tags": [
+    "standing",
+    "legs",
+    "spine",
+    "shoulders"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c70"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c70.svg",
+  "asana": {
+    "sanskrit": "Parsva Virabhadrasana",
+    "name": "Reverse Warrior"
+  },
+  "level": "beginners",
+  "tags": [
+    "standing",
+    "legs",
+    "hip",
+    "arms",
+    "shoulders"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c71"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c71.svg",
+  "asana": {
+    "sanskrit": "Paschimottanasana",
+    "name": "Seated Forward Bend"
+  },
+  "level": "beginners",
+  "tags": [
+    "sitting",
+    "legs",
+    "back",
+    "glutes"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c72"
+  },
+  "sanskrit_name": "Padmasana",
+  "english_name": "Lotus",
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c72.svg",
+  "asana": {
+    "sanskrit": "Padmasana",
+    "name": "Lotus"
+  },
+  "level": "advanced",
+  "tags": [
+    "sitting",
+    "legs",
+    "hip"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c73"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c73.svg",
+  "asana": {
+    "sanskrit": "Ardha Matsyendrasana",
+    "name": "Half Lord of the Fishes"
+  },
+  "level": "advanced beginners",
+  "tags": [
+    "sitting",
+    "legs",
+    "hip",
+    "shoulders",
+    "spine"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c74"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c74.svg",
+  "asana": {
+    "sanskrit": "Salamba Sarvangasana",
+    "name": "Shoulder Stand"
+  },
+  "level": "advanced beginners",
+  "tags": [
+    "inversion",
+    "shoulders",
+    "neck",
+    "abdominals",
+    "back"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c75"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c75.svg",
+  "asana": {
+    "sanskrit": "Vasisthasana",
+    "name": "Side Plank"
+  },
+  "level": "beginners",
+  "tags": [
+    "arm balance",
+    "arms",
+    "abdominals",
+    "shoulders",
+    "wrist",
+    "legs",
+    "balance"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c76"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c76.svg",
+  "asana": {
+    "sanskrit": "Salamba Bhujangasana",
+    "name": "Sphinx"
+  },
+  "level": "beginners",
+  "tags": [
+    "back bend",
+    "spine",
+    "chest",
+    "shoulders",
+    "abdominals"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c77"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c77.svg",
+  "asana": {
+    "sanskrit": "Hanumanasana",
+    "name": "Splits"
+  },
+  "level": "advanced",
+  "tags": [
+    "sitting",
+    "legs",
+    "thigh",
+    "glutes",
+    "abdominals"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c78"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c78.svg",
+  "asana": {
+    "sanskrit": "Malasana",
+    "name": "Squat"
+  },
+  "level": "beginners",
+  "tags": [
+    "standing",
+    "hip",
+    "abdominals",
+    "ankle"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c79"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c79.svg",
+  "asana": {
+    "sanskrit": "Uttanasana",
+    "name": "Standing Forward Bend"
+  },
+  "level": "beginners",
+  "tags": [
+    "standing",
+    "spine",
+    "legs",
+    "thigh"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c7a"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c7a.svg",
+  "asana": {
+    "sanskrit": "Ashta Chandrasana",
+    "name": "Crescent Moon"
+  },
+  "level": "advanced beginners",
+  "tags": [
+    "standing",
+    "balance",
+    "legs",
+    "hip",
+    "glutes"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c7b"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c7b.svg",
+  "asana": {
+    "sanskrit": "Upavistha Konasana",
+    "name": "Side Splits"
+  },
+  "level": "advanced beginners",
+  "tags": [
+    "sitting",
+    "legs",
+    "hip",
+    "glutes",
+    "spine"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c7c"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c7c.svg",
+  "asana": {
+    "sanskrit": "Vrksasana",
+    "name": "Tree"
+  },
+  "level": "beginners",
+  "tags": [
+    "standing",
+    "legs",
+    "glutes",
+    "abdominals"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c7d"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c7d.svg",
+  "asana": {
+    "sanskrit": "Trikonasana",
+    "name": "Triangle"
+  },
+  "level": "beginners",
+  "tags": [
+    "standing",
+    "thigh",
+    "glutes",
+    "abdominals",
+    "balance"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c7e"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c7e.svg",
+  "asana": {
+    "sanskrit": "Urdhva Mukha Svsnssana",
+    "name": "Upward-Facing Dog"
+  },
+  "level": "beginners",
+  "tags": [
+    "back bend",
+    "chest",
+    "glutes",
+    "abdominals",
+    "back",
+    "spine"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c7f"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c7f.svg",
+  "asana": {
+    "sanskrit": "Virabhadrasana One",
+    "name": "Warrior One"
+  },
+  "level": "beginners",
+  "tags": [
+    "standing",
+    "legs",
+    "arms",
+    "hip",
+    "shoulders"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c80"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c80.svg",
+  "asana": {
+    "sanskrit": "Virabhadrasana Two",
+    "name": "Warrior Two"
+  },
+  "level": "beginners",
+  "tags": [
+    "standing",
+    "legs",
+    "arms",
+    "hip",
+    "shoulders"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c81"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c81.svg",
+  "asana": {
+    "sanskrit": "Virabhadrasana Three",
+    "name": "Warrior Three"
+  },
+  "level": "advanced beginners",
+  "tags": [
+    "standing",
+    "legs",
+    "arms",
+    "balance",
+    "shoulders",
+    "ankle"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c82"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c82.svg",
+  "asana": {
+    "sanskrit": "Urdhva Dhanurasana",
+    "name": "Wheel"
+  },
+  "level": "advanced",
+  "tags": [
+    "back bend",
+    "abdominals",
+    "glutes",
+    "thigh",
+    "shoulders"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "6267e2774dc8720798465c83"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/6267e2774dc8720798465c83.svg",
+  "asana": {
+    "sanskrit": "Camatkarasana",
+    "name": "Wild Thing"
+  },
+  "level": "advanced",
+  "tags": [
+    "back bend",
+    "abdominals",
+    "glutes",
+    "thigh",
+    "shoulders"
+  ],
+  "default": true
+},{
+  "_id": {
+    "$oid": "626bf3b57ede1204a04cab4a"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/626bf3b57ede1204a04cab4a.svg",
+  "asana": {
+    "sanskrit": "Blubbasana",
+    "name": "The Blubb"
+  },
+  "user": "6260146101b2260d9fa2b964",
+  "default": false,
+  "level": "advanced beginners",
+  "tags": [
+    "arm balances",
+    "abdominals",
+    "back",
+    "inversion"
+  ]
+},{
+  "_id": {
+    "$oid": "626bf3eb7ede1204a04cab51"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/626bf3eb7ede1204a04cab51.svg",
+  "asana": {
+    "sanskrit": "My own Asana",
+    "name": "Custom Asana"
+  },
+  "user": "6260146101b2260d9fa2b964",
+  "default": false,
+  "level": "advanced beginners",
+  "tags": [
+    "arm balances",
+    "abdominals",
+    "back",
+    "inversion"
+  ]
+},{
+  "_id": {
+    "$oid": "626bf4a8ed4cf0ae52daf7bd"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/626bf4a8ed4cf0ae52daf7bd.svg",
+  "asana": {
+    "sanskrit": "Haukasana",
+    "name": "The Haukman"
+  },
+  "user": "6260146101b2260d9fa2b964",
+  "default": false,
+  "level": "advanced beginners",
+  "tags": [
+    "arm balances",
+    "abdominals",
+    "back",
+    "inversion"
+  ]
+},{
+  "_id": {
+    "$oid": "6270f5e19ae18d22086b3d89"
+  },
+  "img_url": "https://yogalesson-createor-backend.herokuapp.com/images/asana/Tadasana_Berg_neu.png",
+  "default": true,
+  "asana": {
+    "sanskrit": "Tadasana",
+    "name": "Mountain"
+  },
+  "level": "beginners",
+  "tags": [
+    "standing",
+    "abdominals",
+    "glutes",
+    "thigh",
+    "legs"
+  ]
+}]
