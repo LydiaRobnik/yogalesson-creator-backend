@@ -20,6 +20,9 @@ routes.get("/verify", verifyToken(), async (req, res) => {
   res.json(req.user);
 });
 
+routes.get("/revalidate", controller.revalidateUser);
+routes.get("/validate/:token", controller.validateUser);
+
 routes.get("/custom-admin-function", async (req, res) => {
   // res.json({ success: 'valid token' });
   res.json(req.user);

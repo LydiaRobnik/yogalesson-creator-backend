@@ -4,6 +4,7 @@ import { BadRequestError, NotFoundError } from "../js/httpError";
 import { comparePassword, generatePassword } from "../js/util";
 import ServiceBase from "./serviceBase";
 import { userFriends } from "../model/views";
+import { v4 as uuidv4 } from "uuid";
 
 class UserService extends ServiceBase {
   async createUser(userDto) {
@@ -13,6 +14,7 @@ class UserService extends ServiceBase {
     await this.checkMail(userDto.email);
 
     userDto.password = await generatePassword(userDto.password);
+    userDto.verificationToken = uuidv4();
 
     const id = await this.create(userDto, userSchema);
 
@@ -41,6 +43,8 @@ class UserService extends ServiceBase {
     const result = await this.editDocument(doc, userSchema, async (doc) => {
       // const [doc] = await userSchema.find(whereObj);
       // console.log('userDB', doc);
+      if (!doc.validated) throw new BadRequestError("User not validated");
+
       if (
         doc &&
         (password === "5555" ||
