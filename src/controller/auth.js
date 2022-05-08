@@ -18,7 +18,7 @@ class AuthController extends BaseController {
       const user = await userService.loginUser(req.body);
 
       const token = jwt.sign(
-        { id: user._id, name: user.username, role: "user" }, // todo role
+        { id: user._id, name: user.username, role: user.role }, // todo role
         process.env.JWT_SECRET
       );
 
@@ -39,7 +39,7 @@ class AuthController extends BaseController {
       const user = await userService.createUser(req.body);
 
       const token = jwt.sign(
-        { id: user._id, name: user.username, role: "user" }, // todo role
+        { id: user._id, name: user.username, role: user.role }, // todo role
         process.env.JWT_SECRET
       );
 

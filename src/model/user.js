@@ -10,7 +10,9 @@ const userSchema = new Schema({
   online: Boolean,
   token: String,
   avatar: String,
-  verificationToken: String
+  verificationToken: String,
+  modifiedAt: { type: Date, default: new Date() },
+  role: String
 });
 
 export default mongoose.model("User", userSchema);
