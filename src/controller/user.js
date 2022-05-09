@@ -1,13 +1,13 @@
-import { BadRequestError, NotFoundError } from '../js/httpError';
-import BaseController from './controllerBase';
-import userService from '../service/user';
-import userSchema from '../model/user';
+import { BadRequestError, NotFoundError } from "../js/httpError";
+import BaseController from "./controllerBase";
+import userService from "../service/user";
+import userSchema from "../model/user";
 
 class UserController extends BaseController {
   async createUser(req, res, next) {
     try {
       const id = await userService.createUser(req.body);
-      if (!id) throw new Error('Error createUser');
+      if (!id) throw new Error("Error createUser");
 
       return res.status(200).json({ id: id });
     } catch (error) {
@@ -46,6 +46,16 @@ class UserController extends BaseController {
   async changeUsername(req, res, next) {
     try {
       const result = await userService.changeUsername(req.user.id, req.body);
+
+      if (result) return res.status(200).json(result);
+    } catch (error) {
+      next(error);
+    }
+  }
+
+  async changeAvatar(req, res, next) {
+    try {
+      const result = await userService.changeAvatar(req.user.id, req.body);
 
       if (result) return res.status(200).json(result);
     } catch (error) {
@@ -95,7 +105,7 @@ class UserController extends BaseController {
   async checkName(req, res, next) {
     try {
       const result = await userService.checkName(req.params.name);
-      return res.status(200).json('ok');
+      return res.status(200).json("ok");
     } catch (error) {
       next(error);
     }
