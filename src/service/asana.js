@@ -81,7 +81,9 @@ class AsanaService extends ServiceBase {
       // Remove header
       let [imageType, base64Image] = url.split(";base64,");
 
-      const fileName = `${id}.${imageType.split("/")[1]}`;
+      // avoid browser cache
+      const addRandomNumber = Math.floor(Math.random() * 1000);
+      const fileName = `${id}${addRandomNumber}.${imageType.split("/")[1]}`;
 
       fs.writeFile(
         path.resolve(`public/images/asana/${fileName}`),
