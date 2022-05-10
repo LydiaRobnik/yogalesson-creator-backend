@@ -98,6 +98,18 @@ class AuthController extends BaseController {
     }
   }
 
+  async changeEmail(req, res, next) {
+    try {
+      const user = await userService.changeEmail(req.user.id, req.body);
+      console.log("user", user);
+      sendVerificationMail(user);
+
+      if (user) return res.status(200).json(user);
+    } catch (error) {
+      next(error);
+    }
+  }
+
   testHtmlMail() {
     console.log({
       user: process.env.GMAIL_MAIL,

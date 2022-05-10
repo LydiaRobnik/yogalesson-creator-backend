@@ -106,6 +106,20 @@ class UserService extends ServiceBase {
     return result;
   }
 
+  async changeEmail(id, userDto) {
+    const { email } = userDto;
+    const result = await this.editDocumentById(id, userSchema, async (doc) => {
+      if (doc.email === email) return;
+      await this.checkMail(email);
+      doc.email = email;
+      doc.validated = false;
+      doc.verificationToken = uuidv4();
+      return doc;
+    });
+
+    return result;
+  }
+
   async changeAvatar(id, userDto) {
     const [isUpload, fileName] = await this.checkUrl(
       userDto.avatar,
