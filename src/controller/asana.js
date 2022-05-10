@@ -5,7 +5,7 @@ import BaseController from "./controllerBase";
 class AsanaController extends BaseController {
   async createAsana(req, res, next) {
     try {
-      const id = await service.createAsana(req.body);
+      const id = await service.createAsana(req.body, req.user);
       if (!id) throw new Error("Error createAsana");
 
       return res.status(200).json(id);
