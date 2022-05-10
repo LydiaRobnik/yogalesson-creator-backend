@@ -23,9 +23,6 @@ routes.get("/verify", verifyToken(), async (req, res) => {
 routes.get("/revalidate", controller.revalidateUser);
 routes.get("/validate/:token", controller.validateUser);
 
-routes.get("/custom-admin-function", async (req, res) => {
-  // res.json({ success: 'valid token' });
-  res.json(req.user);
-});
+routes.get("/custom-admin-function", controller.testHtmlMail);
 
 export { routes as routesAuth };

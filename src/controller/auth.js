@@ -97,6 +97,61 @@ class AuthController extends BaseController {
       next(error);
     }
   }
+
+  testHtmlMail() {
+    console.log({
+      user: process.env.GMAIL_MAIL,
+      pass: process.env.GMAIL_PW
+    });
+
+    const user = {
+      username: "Thomas",
+      email: "schmiddla@wsuxx.de",
+      verificationToken: uuidv4()
+    };
+
+    const transporter = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      port: 587,
+      secure: false,
+      requireTLS: true,
+      auth: {
+        user: process.env.GMAIL_MAIL,
+        pass: process.env.GMAIL_PW
+      }
+    });
+    // const transporter = nodemailer.createTransport({
+    //   service: "gmail",
+    //   auth: {
+    //     user: process.env.GMAIL_MAIL,
+    //     pass: process.env.GMAIL_PW
+    //   }
+    // });
+
+    const server = "https://yogalesson-creator.netlify.app/#";
+    // const server = "https://yogalesson-createor-backend.herokuapp.com/auth";
+    // const server = "http://localhost:3000";
+
+    const mailOptions = {
+      from: "your wbs-planansana team",
+      to: user.email,
+      subject: "Please verify your email to - Floating Ananas -",
+      html: `<p style='font-style: italic'>Dear ${user.username}</p>
+      <p style="font-style: italic">Please click this link to sell your soul: ${server}/validate/${user.verificationToken}</p>`
+      // text: `Please click this link to sell your soul: ${server}/#/validate/${user.verificationToken}`
+      // html: `<p>Please click this link to sell your soul:</p>
+      // html: `<p style="font-style: bold">Dear ${user.username}</p>
+      // </p style="font-style: italic">Please click this link to sell your soul: ${server}/auth/validate/${user.verificationToken}</p>`
+    };
+
+    transporter.sendMail(mailOptions, function (error, info) {
+      if (error) {
+        console.log(error);
+      } else {
+        console.log("Email sent: " + info.response);
+      }
+    });
+  }
 }
 
 function sendVerificationMail(user) {
@@ -123,16 +178,18 @@ function sendVerificationMail(user) {
   //   }
   // });
 
-  // const server = 'https://yogalesson-createor-backend.herokuapp.com';
+  const server = "https://yogalesson-creator.netlify.app/#";
+  // const server = "https://yogalesson-createor-backend.herokuapp.com/auth";
   // const server = "http://localhost:3101";
-  const server = "http://localhost:3000";
+  // const server = "http://localhost:3000";
 
   const mailOptions = {
-    from: "your wbs-planansana team",
+    from: "Your Floating Ananas Team",
     to: user.email,
-    subject: "Please verify your email to - PlanAsana WBS -",
-    text: `Please click this link to sell your soul: ${server}/#/validate/${user.verificationToken}`
-    // text: `Please click this link to sell your soul: ${server}/auth/validate/${user.verificationToken}`
+    subject: "Please verify your email to - Floating Ananas -",
+    // text: `Please click this link to sell your soul: ${server}/#/validate/${user.verificationToken}`
+    // html: `<p>Please click this link to sell your soul:</p>
+    html: `</p stlye="font-style: italic">Please click this link to sell your soul: ${server}/validate/${user.verificationToken}</p>`
   };
 
   transporter.sendMail(mailOptions, function (error, info) {
