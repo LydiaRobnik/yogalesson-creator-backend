@@ -7,6 +7,7 @@ import controller from "../controller/asana";
 import service from "../service/asana";
 import schema from "../model/asana";
 import BaseRouter from "./routes-base";
+import verifyToken from "../middleware/verifyToken";
 
 const baseRouter = new BaseRouter(controller, service, schema);
 const routes = baseRouter.routes;
@@ -23,8 +24,8 @@ baseRouter
   .addDeleteDefault()
   .addCustomAdminFunction(service.customAdminFunction.bind(service));
 
-routes.post("/", validateBody, controller.createAsana);
-routes.put("/:id", validateBody, controller.updateAsana);
+routes.post("/", verifyToken(), validateBody, controller.createAsana);
+routes.put("/:id", verifyToken(), validateBody, controller.updateAsana);
 
 // routes.post('/', validateBody, controller.createAsana);
 

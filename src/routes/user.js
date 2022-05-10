@@ -56,7 +56,6 @@ routes.put(
   checkUserExists,
   controller.changePassword
 );
-
 routes.put(
   "/:id/change-username",
   verifyToken(),

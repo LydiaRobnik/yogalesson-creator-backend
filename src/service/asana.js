@@ -10,7 +10,8 @@ import https from "https";
 // import pokedex from '../model/pokedex.json';
 
 class AsanaService extends ServiceBase {
-  async createAsana(asanaDto) {
+  async createAsana(asanaDto, user) {
+    console.log("createAsana >>> user: ", user);
     await this.checkName(asanaDto.asana.sanskrit);
 
     const id = await this.create(asanaDto, asanaSchema);
@@ -68,7 +69,8 @@ class AsanaService extends ServiceBase {
       _id: { $ne: id }
     });
     if (result.length > 0) {
-      throw new BadRequestError("Asananame already exists");
+      // todo temporarily disabled, because of user-asanas (prepared with user-id from jwt)
+      // throw new BadRequestError("Asananame already exists");
     }
 
     return result;
