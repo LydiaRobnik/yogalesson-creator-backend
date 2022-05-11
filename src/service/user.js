@@ -3,7 +3,6 @@ import userSchema from "../model/user";
 import { BadRequestError, NotFoundError } from "../js/httpError";
 import { comparePassword, generatePassword } from "../js/util";
 import ServiceBase from "./serviceBase";
-import { userFriends } from "../model/views";
 import { v4 as uuidv4 } from "uuid";
 import fs from "fs";
 import path from "path";
@@ -75,15 +74,6 @@ class UserService extends ServiceBase {
     // throw new Error('Error logout');
   }
 
-  async setOnOffline(id, isOn = true) {
-    const result = await this.editDocumentById(id, userSchema, async (doc) => {
-      doc.online = isOn;
-      return doc;
-    });
-
-    return result;
-  }
-
   async changePassword(id, userDto) {
     const { password } = userDto;
     const result = await this.editDocumentById(id, userSchema, async (doc) => {
@@ -147,118 +137,6 @@ class UserService extends ServiceBase {
     // });
 
     return doc;
-  }
-
-  async friendRequest(from, to) {
-    const result = await this.editDocumentById(to, userSchema, async (doc) => {
-      if (!doc.friends.some((friend) => friend.userid.toString() === from)) {
-        doc.friends.push({
-          userid: from,
-          status: "pending",
-          date: new Date()
-        });
-      }
-
-      return doc;
-    });
-
-    return result;
-  }
-
-  async getFriends(id) {
-    let friends = await userFriends.find({ _id: id });
-    friends = friends.map((p) => ({
-      id: p._doc.friend._id,
-      username: p._doc.friend.username,
-      email: p._doc.friend.email,
-      status: p._doc.friends.status,
-      date: p._doc.friends.date
-    }));
-    return friends;
-  }
-
-  async friendAccepted(userId, friendId) {
-    //user
-    await this.editDocumentById(userId, userSchema, async (doc) => {
-      const friend = doc.friends.find(
-        (friend) => friend.userid.toString() === friendId
-      );
-      if (friend?.status === "pending") {
-        friend.status = "accepted";
-        friend.date = new Date();
-      }
-      return doc;
-    });
-
-    //friend
-    const result = await this.editDocumentById(
-      friendId,
-      userSchema,
-      async (doc) => {
-        if (
-          !doc.friends.some((friend) => friend?.userid?.toString() === userId)
-        ) {
-          doc.friends.push({
-            userid: userId,
-            status: "accepted",
-            date: new Date()
-          });
-        }
-
-        return doc;
-      }
-    );
-
-    return result;
-  }
-
-  async friendRejected(userId, friendId) {
-    // remove user-entry
-    const userDoc = await this.getById(userId, userSchema);
-
-    const isPending = userDoc.friends.find(
-      (friend) =>
-        friend.userid?.toString() === friendId && friend.status === "pending"
-    );
-
-    if (!isPending) return;
-
-    await this.editDocumentById(userId, userSchema, async (doc) => {
-      doc.friends = doc.friends.filter(
-        (friend) => friend.userid?.toString() !== friendId
-      );
-      return doc;
-    });
-
-    // remove friend-entry
-    await this.editDocumentById(friendId, userSchema, async (doc) => {
-      doc.friends = doc.friends.filter(
-        (friend) => friend.userid?.toString() !== userId
-      );
-      return doc;
-    });
-
-    return;
-  }
-
-  async friendRemove(userId, friendId) {
-    //user
-    await this.editDocumentById(userId, userSchema, async (doc) => {
-      doc.friends = doc.friends.filter(
-        (friend) => friend.userid?.toString() !== friendId
-      );
-      return doc;
-    });
-
-    //remove user in friendslist too
-    await this.editDocumentById(friendId, userSchema, async (doc) => {
-      doc.friends = doc.friends.filter(
-        (friend) => friend.userid?.toString() !== userId
-      );
-      return doc;
-    });
-
-    return result;
   }
 
   async checkName(name, id) {
