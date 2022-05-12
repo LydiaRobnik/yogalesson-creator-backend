@@ -156,9 +156,9 @@ class AuthController extends BaseController {
       console.log("html", html);
 
       const mailOptions = {
-        from: "Your Floating Ananas Team",
+        from: "Your Monkey Plan loating Ananas Team",
         to: user.email,
-        subject: "Please verify your email to - Floating Ananas -",
+        subject: "Please verify your email to - Monkey Plan -",
         // text: `Please click this link to sell your soul: ${server}/#/validate/${user.verificationToken}`
         // html: `<p>Please click this link to sell your soul:</p>
         html: html
@@ -216,9 +216,9 @@ async function sendVerificationMail(user) {
     console.log("html", html);
 
     const mailOptions = {
-      from: "Your Floating Ananas Team",
+      from: "Your Monkey Plan Team",
       to: user.email,
-      subject: "Please verify your email to - Floating Ananas -",
+      subject: "Please verify your email to - Monkey Plan -",
       // text: `Please click this link to sell your soul: ${server}/#/validate/${user.verificationToken}`
       // html: `<p>Please click this link to sell your soul:</p>
       html: html
