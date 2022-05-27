@@ -14,9 +14,11 @@ if (process.env.NODE_ENV !== "production") {
 
 class GoogleBucket {
   constructor() {
-    this.storage = new Storage({
-      keyFilename: path.resolve(`src/monkeyplan-3a283b36fcf9.json`)
-    });
+    // this.storage = new Storage({
+    //   keyFilename: path.resolve(`src/monkeyplan-3a283b36fcf9.json`)
+    // });
+    // ! in gcloud deployed app, the keyfile is not needed
+    this.storage = new Storage();
 
     this.bucket = this.storage.bucket(process.env.GCLOUD_STORAGE_BUCKET);
 

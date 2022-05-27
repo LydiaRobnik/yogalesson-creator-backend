@@ -108,9 +108,12 @@ class AsanaService extends ServiceBase {
   async customAdminFunction() {
     console.log("customAdminFunction");
 
-    // const res = await GoogleStorage.upload("../awwwww-hoch-zehn.jpg", {
-    //   destination: "app/awwwww-hoch-zehn.jpg"
-    // });
+    // const res = await GoogleStorage.upload(
+    //   "public/images/awwwww-hoch-zehn.jpg",
+    //   {
+    //     destination: "app/awwwww-hoch-zehn.jpg"
+    //   }
+    // );
     // // // `mediaLink` is the URL for the raw contents of the file.
     // console.log("url: ", res[0].metadata.mediaLink);
 
