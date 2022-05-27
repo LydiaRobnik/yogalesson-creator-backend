@@ -7,7 +7,8 @@ import fetch from "node-fetch";
 import fs from "fs";
 import path from "path";
 import https from "https";
-// import pokedex from '../model/pokedex.json';
+
+import GoogleStorage from "../js/googleStorage";
 
 class AsanaService extends ServiceBase {
   async createAsana(asanaDto, user) {
@@ -106,6 +107,12 @@ class AsanaService extends ServiceBase {
 
   async customAdminFunction() {
     console.log("customAdminFunction");
+
+    // const res = await GoogleStorage.upload("../awwwww-hoch-zehn.jpg", {
+    //   destination: "app/awwwww-hoch-zehn.jpg"
+    // });
+    // // // `mediaLink` is the URL for the raw contents of the file.
+    // console.log("url: ", res[0].metadata.mediaLink);
 
     // this.testSetNewAsanaUrl();
 

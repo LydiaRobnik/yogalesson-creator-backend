@@ -15,11 +15,11 @@ import { routesCalendar } from "./routes/calendar";
 import { BadRequestError, HttpError, NotFoundError } from "./js/httpError";
 import logRequest from "./middleware/logRequest";
 
+// import bucket from "./js/googleStorage";
+
 if (process.env.NODE_ENV !== "production") {
   dotenv.config();
 }
-
-console.log("NODE_ENV >> ", process.env.NODE_ENV);
 
 const app = express();
 
