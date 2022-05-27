@@ -64,7 +64,7 @@ app.use("/auth", routesAuth);
 // app.use('/character', routesCharacter);
 
 /** images & co */
-app.use(express.static("public"));
+// app.use(express.static("public"));
 
 /** Error handling */
 app.use((error, req, res, next) => {

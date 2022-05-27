@@ -10,8 +10,8 @@ import BaseRouter from "./routes-base";
 import path from "path";
 import multer from "multer";
 
-// multer config
-const upload = multer({ dest: path.resolve("public/uploads/") });
+// todo multer config -> gcloud https://www.npmjs.com/package/multer-cloud-storage
+// const upload = multer({ dest: path.resolve("public/uploads/") });
 
 const baseRouter = new BaseRouter(controller, service, schema);
 const routes = baseRouter.routes;
@@ -27,13 +27,13 @@ baseRouter
   .addEditDefault(validateBody, service.checkData.bind(service))
   .addDeleteDefault();
 
-routes.post(
-  "/:id/upload-preview",
-  express.raw({ type: "image/*" }),
-  upload.single("preview_pic"),
-  // checkImage,
-  controller.uploadPreview
-);
+// routes.post(
+//   "/:id/upload-preview",
+//   express.raw({ type: "image/*" }),
+//   upload.single("preview_pic"),
+//   // checkImage,
+//   controller.uploadPreview
+// );
 
 // routes.post('/', validateBody, controller.createClass);
 
