@@ -16,6 +16,7 @@ runtime: nodejs16
 service: api
 
 env_variables:
+  BASE_URL: /api
   GCLOUD_STORAGE_BUCKET: monkeyplan-bucket
   DB_MONGO_ATLAS_PW: r51uSAG8HbkNtpuy
   JWT_SECRET: yogalessons

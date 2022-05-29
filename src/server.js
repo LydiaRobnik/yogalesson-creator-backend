@@ -21,6 +21,8 @@ if (process.env.NODE_ENV !== "production") {
   dotenv.config();
 }
 
+const baseUrl = process.env.BASE_URL ? process.env.BASE_URL : "";
+
 const app = express();
 
 const PORT = process.env.PORT ?? 3101;
@@ -55,12 +57,12 @@ app.use(morgan("dev"));
 app.use(logRequest);
 
 /** Routes */
-app.use("/user", routesUser);
-app.use("/asana", routesAsana);
-app.use("/class", routesClass);
-app.use("/sequence", routesSequence);
-app.use("/calendar", routesCalendar);
-app.use("/auth", routesAuth);
+app.use(`${baseUrl}/user`, routesUser);
+app.use(`${baseUrl}/asana`, routesAsana);
+app.use(`${baseUrl}/class`, routesClass);
+app.use(`${baseUrl}/sequence`, routesSequence);
+app.use(`${baseUrl}/calendar`, routesCalendar);
+app.use(`${baseUrl}/auth`, routesAuth);
 // app.use('/character', routesCharacter);
 
 /** images & co */
@@ -96,5 +98,5 @@ const httpServer = http.createServer(app);
 
 httpServer.listen(PORT, () => {
   console.log(`The server is running on port ${PORT}`);
-  console.log(`Example: http://localhost:${PORT}/asana`);
+  console.log(`Example: http://localhost:${PORT}${baseUrl}/asana`);
 });
