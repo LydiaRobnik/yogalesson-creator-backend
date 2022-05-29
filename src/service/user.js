@@ -7,6 +7,8 @@ import { v4 as uuidv4 } from "uuid";
 import fs from "fs";
 import path from "path";
 
+import googleStorage from "../js/googleStorage";
+
 class UserService extends ServiceBase {
   async createUser(userDto) {
     // const { username, email, password, validated } = userDto;
@@ -124,7 +126,7 @@ class UserService extends ServiceBase {
         userDto.modifiedAt = new Date();
 
         if (isUpload) {
-          userDto.avatar = `https://yogalesson-createor-backend.herokuapp.com/images/avatar/${fileName}`;
+          userDto.avatar = `${process.env.GCS_BUCKET_URL}/avatars/${fileName}`;
         }
         return userDto;
       }
@@ -168,14 +170,29 @@ class UserService extends ServiceBase {
       const addRandomNumber = Math.floor(Math.random() * 1000);
       const fileName = `${id}${addRandomNumber}.${imageType.split("/")[1]}`;
 
-      fs.writeFile(
-        path.resolve(`public/images/avatar/${fileName}`),
-        base64Image,
-        "base64",
-        function (err) {
-          console.log(err);
+      const destinationPath = `avatars/${fileName}`;
+
+      const file64 = Buffer.from(base64Image, "base64");
+
+      console.log("file from base64", file64.type, destinationPath);
+
+      await googleStorage.uploadBase64(
+        file64,
+        imageType.split(":")[1],
+        destinationPath,
+        {
+          cacheControl: "public, max-age=604800" /// 1 week
         }
       );
+
+      // fs.writeFile(
+      //   path.resolve(`public/images/avatar/${fileName}`),
+      //   base64Image,
+      //   "base64",
+      //   function (err) {
+      //     console.log(err);
+      //   }
+      // );
 
       // uploaded image -> set url in DB
       return [true, fileName];

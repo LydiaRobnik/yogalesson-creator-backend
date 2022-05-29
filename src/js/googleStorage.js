@@ -14,15 +14,63 @@ if (process.env.NODE_ENV !== "production") {
 
 class GoogleBucket {
   constructor() {
-    // this.storage = new Storage({
-    //   keyFilename: path.resolve(`src/monkeyplan-3a283b36fcf9.json`)
-    // });
-    // ! in gcloud deployed app, the keyfile is not needed
-    this.storage = new Storage();
+    if (process.env.NODE_ENV !== "production") {
+      console.log("!! development !!");
+      this.storage = new Storage({
+        keyFilename: path.resolve(`src/monkeyplan-3a283b36fcf9.json`)
+      });
+    } else {
+      console.log("!! Production !!");
+      // ! in gcloud deployed app, the keyfile is not needed
+      this.storage = new Storage();
+    }
 
-    this.bucket = this.storage.bucket(process.env.GCLOUD_STORAGE_BUCKET);
+    this.bucket = this.storage.bucket(process.env.GCS_BUCKET);
 
     console.log("Google Bucket Created >> ", this.bucket.id);
+  }
+
+  async uploadFile(file, mimetype, path, metadata) {
+    const bucketFile = this.bucket.file(path);
+
+    const stream = bucketFile.createWriteStream({
+      metadata: {
+        contentType: mimetype,
+        ...metadata
+      }
+    });
+
+    stream.on("error", (err) => {
+      // req.file.cloudStorageError = err;
+      throw err;
+    });
+
+    stream.on("finish", () => {
+      console.log("Uploaded file to GCS");
+      // req.file.cloudStorageObject = gcsFileName;
+
+      // return file.makePublic()
+      //   .then(() => {
+      //     req.file.gcsUrl = gcsHelpers.getPublicUrl(bucketName, gcsFileName);
+      //     next();
+      //   });
+    });
+
+    stream.end(file.buffer);
+  }
+
+  async uploadBase64(base64, contentType, path, metadata) {
+    // another way to upload file -> https://stackoverflow.com/questions/42879012/how-do-i-upload-a-base64-encoded-image-string-directly-to-a-google-cloud-stora
+    const imageBuffer = Buffer.from(base64, "base64");
+    // Store Poster to storage
+    const resp = await this.bucket.file(path).save(imageBuffer, {
+      metadata: {
+        contentType,
+        ...metadata
+      }
+    });
+
+    console.log("Uploaded file to GCS", resp);
   }
 }
 
@@ -43,5 +91,5 @@ class GoogleBucket {
 // listBuckets();
 
 // Singleton pattern
-export default new GoogleBucket().bucket;
+export default new GoogleBucket();
 // export default GoogleStorage;

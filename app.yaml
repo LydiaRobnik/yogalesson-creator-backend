@@ -17,7 +17,8 @@ service: api
 
 env_variables:
   BASE_URL: /api
-  GCLOUD_STORAGE_BUCKET: monkeyplan-bucket
+  GCS_BUCKET: monkeyplan-bucket
+  GCS_BUCKET_URL: https://storage.googleapis.com/monkeyplan-bucket/
   DB_MONGO_ATLAS_PW: r51uSAG8HbkNtpuy
   JWT_SECRET: yogalessons
 # [END gae_storage_yaml]

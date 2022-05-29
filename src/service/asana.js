@@ -8,7 +8,7 @@ import fs from "fs";
 import path from "path";
 import https from "https";
 
-import GoogleStorage from "../js/googleStorage";
+import googleStorage from "../js/googleStorage";
 
 class AsanaService extends ServiceBase {
   async createAsana(asanaDto, user) {
@@ -20,7 +20,7 @@ class AsanaService extends ServiceBase {
 
     if (isUpload) {
       await this.editDocumentById(id._id, asanaSchema, (doc) => {
-        doc.img_url = `https://yogalesson-createor-backend.herokuapp.com/images/asana/${fileName}`;
+        doc.img_url = `${process.env.GCS_BUCKET_URL}/asanas/${fileName}`;
         return doc;
       });
     }
@@ -43,7 +43,7 @@ class AsanaService extends ServiceBase {
         asanaDto.modifiedAt = new Date();
 
         if (isUpload) {
-          asanaDto.img_url = `https://yogalesson-createor-backend.herokuapp.com/images/asana/${fileName}`;
+          asanaDto.img_url = `${process.env.GCS_BUCKET_URL}/asanas/${fileName}`;
         }
         return asanaDto;
       }
@@ -88,14 +88,32 @@ class AsanaService extends ServiceBase {
       const addRandomNumber = Math.floor(Math.random() * 1000);
       const fileName = `${id}${addRandomNumber}.${imageType.split("/")[1]}`;
 
-      fs.writeFile(
-        path.resolve(`public/images/asana/${fileName}`),
-        base64Image,
-        "base64",
-        function (err) {
-          console.log(err);
+      const destinationPath = `asanas/${fileName}`;
+
+      // const res = await fetch(url);
+      // const buff = await res.arrayBuffer();
+      // const file = new File([buff], fileName);
+      const file64 = Buffer.from(base64Image, "base64");
+
+      console.log("file from base64", file64.type, destinationPath);
+
+      await googleStorage.uploadBase64(
+        file64,
+        imageType.split(":")[1],
+        destinationPath,
+        {
+          cacheControl: "public, max-age=604800"
         }
       );
+
+      // fs.writeFile(
+      //   path.resolve(`public/images/asana/${fileName}`),
+      //   base64Image,
+      //   "base64",
+      //   function (err) {
+      //     console.log(err);
+      //   }
+      // );
 
       // uploaded image -> set url in DB
       return [true, fileName];
@@ -108,7 +126,7 @@ class AsanaService extends ServiceBase {
   async customAdminFunction() {
     console.log("customAdminFunction");
 
-    // const res = await GoogleStorage.upload(
+    // const res = await googleStorage.upload(
     //   "public/images/awwwww-hoch-zehn.jpg",
     //   {
     //     destination: "app/awwwww-hoch-zehn.jpg"
