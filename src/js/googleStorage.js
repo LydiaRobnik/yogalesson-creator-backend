@@ -62,7 +62,7 @@ class GoogleBucket {
   async uploadBase64(base64, contentType, path, metadata) {
     // another way to upload file -> https://stackoverflow.com/questions/42879012/how-do-i-upload-a-base64-encoded-image-string-directly-to-a-google-cloud-stora
     const imageBuffer = Buffer.from(base64, "base64");
-    // Store Poster to storage
+    // Store file to storage/bucket
     const resp = await this.bucket.file(path).save(imageBuffer, {
       metadata: {
         contentType,

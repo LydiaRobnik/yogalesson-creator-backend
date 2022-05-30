@@ -17,7 +17,7 @@ class ClassController extends BaseController {
 
       console.log("img", img);
 
-      const destinationPath = `previews/${img.originalname}`;
+      const destinationPath = `previews/preview_${classId}.png`;
 
       // await googleStorage.uploadFile(img, img.mimetype, destinationPath, {
       //   cacheControl: "public, max-age=60"

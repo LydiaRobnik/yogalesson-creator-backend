@@ -1,6 +1,6 @@
 [
   {
-    "origin": ["http://localhost:3000"],
+    "origin": ["http://localhost:3000", "https://monkeyplan.ey.r.appspot.com/"],
     "method": ["GET"],
     "responseHeader": ["Content-Type"],
     "maxAgeSeconds": 3600
