@@ -31,3 +31,7 @@ yarn-error.log*
 
 # google api key
 src/monkeyplan-3a283b36fcf9.json
+
+#gcloud yaml
+app.yaml
+
