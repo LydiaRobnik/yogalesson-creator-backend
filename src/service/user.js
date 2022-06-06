@@ -13,7 +13,7 @@ class UserService extends ServiceBase {
   async createUser(userDto) {
     // const { username, email, password, validated } = userDto;
 
-    await this.checkName(userDto.username);
+    userDto.username = await this.checkName(userDto.username);
     await this.checkMail(userDto.email);
 
     userDto.password = await generatePassword(userDto.password);
@@ -144,6 +144,10 @@ class UserService extends ServiceBase {
   async checkName(name, id) {
     const docUser = await userSchema.find({ username: name, _id: { $ne: id } });
     if (docUser.length > 0) {
+      // beim Erstellen wird der Name automatisch generiert, daher Zahl anhaengen
+      if (!id) {
+        return `${name}-${Math.floor(Math.random() * 1000)}`;
+      }
       throw new BadRequestError("Username already exists");
     }
 

@@ -63,29 +63,6 @@ class UserController extends BaseController {
     }
   }
 
-  async friendRequest(req, res, next) {
-    try {
-      const result = await userService.friendRequest(
-        req.params.friendId,
-        req.user.id
-      );
-
-      if (result) return res.status(200).json(result);
-    } catch (error) {
-      next(error);
-    }
-  }
-
-  async getFriends(req, res, next) {
-    try {
-      const result = await userService.getFriends(req.user.id);
-
-      if (result) return res.status(200).json(result);
-    } catch (error) {
-      next(error);
-    }
-  }
-
   async getUsers(req, res, next) {
     try {
       return res.status(200).json(await userService.getAll(userSchema, req));
@@ -116,16 +93,6 @@ class UserController extends BaseController {
       const result = await userService.deleteUser(req.user.id);
 
       if (result) return res.status(200).json(result);
-    } catch (error) {
-      next(error);
-    }
-  }
-
-  async getUserCharacter(req, res, next) {
-    try {
-      const result = await characterService.getCharacterByUser(req.params.id);
-      if (result) return res.status(200).json(result);
-      else return next(new NotFoundError());
     } catch (error) {
       next(error);
     }

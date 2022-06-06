@@ -14,7 +14,6 @@ const verifyToken = () => {
         next(new HttpError('No token provided', 401));
       } else {
         const decodedUser = jwt.verify(token, process.env.JWT_SECRET);
-        req.user = decodedUser;
 
         // const docUser = await userSchema.find({ username: decodedUser.name });
         const docUser = await userService.getById(decodedUser.id, userSchema);
@@ -23,6 +22,10 @@ const verifyToken = () => {
           next(new NotFoundError('User not found'));
         }
 
+        decodedUser.avatar = docUser.avatar;
+        console.log('👤 req.avatar', req.avatar);
+
+        req.user = decodedUser;
         next();
       }
     } catch (err) {
